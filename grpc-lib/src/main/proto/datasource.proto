@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "com.wr.grpc.lib";
+option java_outer_classname = "DataSourceInfo";
+
+//作⽤：⽣成对应.java ⽂件的类名（不能跟下⾯message的类名相同）
+// 关注2：option选项,作⽤：影响 特定环境下 的处理⽅式
+// 关注3：消息模型 作⽤：真正⽤于描述 数据结构
+service DataSourceService {
+    rpc List (ListRequest) returns (ListResponse) {}
+}
+import "base.proto";
+
+package datasource;
+
+message ListRequest {
+}
+
+message ListResponse {
+    repeated Data data = 1;
+    base.BaseResp baseResp = 255;
+}
+
+message Data {
+    string dataSourceName = 1;
+    string dataSourceType = 2;
+}
