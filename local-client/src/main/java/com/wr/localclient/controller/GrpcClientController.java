@@ -27,6 +27,7 @@ public class GrpcClientController {
 
     @RequestMapping("/r")
     public String getRes() {
+        // 调用出错可能是端口问题
         return dataSourceService.sendMessage();
     }
 
