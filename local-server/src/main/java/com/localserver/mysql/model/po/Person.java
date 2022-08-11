@@ -27,13 +27,13 @@ public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @TableField("PersonId")
-    private Integer PersonId;
+    private Integer personId;
 
     @TableField("FirstName")
-    private String FirstName;
+    private String firstName;
 
     @TableField("LastName")
-    private String LastName;
+    private String lastName;
 
 
 }

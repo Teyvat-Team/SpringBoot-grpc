@@ -36,7 +36,7 @@ spring:
       second:
         driver-class-name: ru.yandex.clickhouse.ClickHouseDriver
         jdbc-url: jdbc:clickhouse://162.14.78.202:8123/Ticket_info
-        username:
+        username: default
         password: root
         initialSize: 10
         maxActive: 10000

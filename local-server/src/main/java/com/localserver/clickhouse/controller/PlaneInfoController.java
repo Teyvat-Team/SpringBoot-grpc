@@ -1,41 +1,39 @@
-package com.localserver.mysql.controller;
+package com.localserver.clickhouse.controller;
 
 
-import cn.hutool.json.JSONArray;
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.localserver.clickhouse.model.po.PlaneInfo;
+import com.localserver.clickhouse.service.IPlaneInfoService;
 import com.localserver.mysql.model.po.Person;
-import com.localserver.mysql.service.IPersonService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 /**
  * <p>
- * 前端控制器 示例代码
+ * plane_info 前端控制器
  * </p>
  *
  * @author xx
- * @since 2022-08-06
+ * @since 2022-08-10
  */
+@ApiOperation("测试接口")
 @RestController
-@RequestMapping("/person")
-public class PersonController {
+@RequestMapping("/plane-info")
+public class PlaneInfoController {
     @Autowired
-    IPersonService personService;
+    private IPlaneInfoService iPlaneInfoService;
 
+    @ApiOperation("查询数据")
     @GetMapping("/list")
     public String testRes() {
-        System.out.println(personService + "值");
-        List<Person> list = personService.list();
-        for (Person person : list) {
-            System.out.println(person.getFirstName());
-            System.out.println(person.getLastName());
-        }
+        List<PlaneInfo> list = iPlaneInfoService.list();
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("data", list);
         return jsonObject.toJSONString();

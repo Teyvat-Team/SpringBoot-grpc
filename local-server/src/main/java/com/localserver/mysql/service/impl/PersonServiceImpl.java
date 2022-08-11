@@ -25,6 +25,6 @@ public class PersonServiceImpl extends ServiceImpl<PersonMapper, Person> impleme
     private PersonMapper personMapper;
 
     public List<Person> list() {
-        return personMapper.selectList(new QueryWrapper<Person>().select("FirstName", "LastName"));
+        return personMapper.selectList(new QueryWrapper<Person>().select("PersonId", "FirstName", "LastName"));
     }
 }
