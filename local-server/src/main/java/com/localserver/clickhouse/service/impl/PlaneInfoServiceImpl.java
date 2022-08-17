@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -23,8 +24,19 @@ public class PlaneInfoServiceImpl extends ServiceImpl<PlaneInfoMapper, PlaneInfo
     @Autowired
     private PlaneInfoMapper planeInfoMapper;
 
+
     @Override
     public List<PlaneInfo> listRes() {
         return planeInfoMapper.selectList(new QueryWrapper<PlaneInfo>().last("limit 0, 2"));
+    }
+
+    @Override
+    public List<String> findAllTables(String databaseName) {
+        return planeInfoMapper.findAllTables(databaseName);
+    }
+
+    @Override
+    public  List<Map<String, Object>> findTableSchema(String databaseName, String tableName) {
+        return planeInfoMapper.findTableSchema(databaseName, tableName);
     }
 }

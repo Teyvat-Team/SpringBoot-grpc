@@ -1,6 +1,8 @@
 package com.wr.localclient.service;
 
-import com.wr.grpc.lib.*;
+import com.wr.grpc.lib.datasource.DataSourceServiceGrpc;
+import com.wr.grpc.lib.datasource.ListRequest;
+import com.wr.grpc.lib.datasource.ListResponse;
 import io.grpc.StatusRuntimeException;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Service;
@@ -27,5 +29,6 @@ public class DataSourceService {
             return "FAILED with " + e.getStatus().getCode().name();
         }
     }
+
 
 }

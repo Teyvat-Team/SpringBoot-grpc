@@ -2,8 +2,10 @@ package com.localserver.clickhouse.service;
 
 import com.localserver.clickhouse.model.po.PlaneInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -15,4 +17,9 @@ import java.util.List;
  */
 public interface IPlaneInfoService extends IService<PlaneInfo> {
     public List<PlaneInfo> listRes();
+
+    List<String> findAllTables(String databaseName);
+
+
+    List<Map<String, Object>> findTableSchema(String databaseName, String tableName);
 }

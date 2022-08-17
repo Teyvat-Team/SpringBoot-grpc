@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -36,6 +38,24 @@ public class PlaneInfoController {
         List<PlaneInfo> list = iPlaneInfoService.list();
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("data", list);
+        return jsonObject.toJSONString();
+    }
+
+    @ApiOperation("查询所有表")
+    @GetMapping("/tables")
+    public String findTables(@RequestParam("databaseName") String databaseName) {
+        List<String> allTables = iPlaneInfoService.findAllTables(databaseName);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("data", allTables);
+        return jsonObject.toJSONString();
+    }
+
+    @ApiOperation("查询表的结构")
+    @GetMapping("/schema")
+    public String findTables(@RequestParam("databaseName") String databaseName, @RequestParam("tableName") String tableName) {
+        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema(databaseName, tableName);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("data", tableSchema);
         return jsonObject.toJSONString();
     }
 

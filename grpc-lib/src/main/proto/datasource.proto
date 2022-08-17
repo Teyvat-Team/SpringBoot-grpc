@@ -2,7 +2,7 @@ syntax = "proto3";
 
 
 option java_multiple_files = true;
-option java_package = "com.wr.grpc.lib";
+option java_package = "com.wr.grpc.lib.datasource";
 option java_outer_classname = "DataSourceInfo";
 
 //作⽤：⽣成对应.java ⽂件的类名（不能跟下⾯message的类名相同）

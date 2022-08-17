@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "com.wr.grpc.lib.db";
+option java_outer_classname = "DbInfo";
+
+service DbService {
+    rpc List (DBRequest) returns (DBResponse) {}}
+
+import "base.proto";
+
+package db;
+
+message DBRequest {
+    string dataSourceTpye = 1; // 数据源类型
+}
+
+message DBResponse {
+    repeated Data data = 1;
+    base.BaseResp baseResp = 255;
+}
+
+message Data {
+    string dbName = 1; // 数据库名称
+}
