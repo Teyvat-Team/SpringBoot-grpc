@@ -1,0 +1,49 @@
+# gRPC有关的配置，这⾥只需要配置服务端⼝号
+grpc:
+  server:
+    port: 50051
+server:
+  port: 8082
+
+spring:
+  profiles:
+    # 指定执行环境
+    active: dev
+  # jackson时间格式化
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  application:
+    # 项目名
+    name: grpc-server
+  #静态资源加载配置
+  mvc:
+    static-path-pattern: /**
+  resource:
+    static-locations: classpath:/static/,classpath:/public/
+
+mybatis-plus:
+
+  #扫描 *mapper.xml 文件
+  #  classpath*:/mappers/**/*:
+  #    xml:
+
+  mapper-locations: classpath*:mapper/**/*.xml
+  #如果不使用type-aliases-package，则在每个实体类前加上@Component即可
+  type-aliases-package: com.localserver.mysql.model.po,com.localserver.clickhouse.model.po
+  configuration:
+    #自动转化命名
+    map-underscore-to-camel-case: true
+    #如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段
+    call-setters-on-nulls: true
+    #这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+#log配置
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    dao: debug
+    org:
+      mybatis: debug

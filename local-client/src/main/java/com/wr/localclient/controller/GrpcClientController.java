@@ -1,12 +1,18 @@
 package com.wr.localclient.controller;
 
+import com.wr.grpc.lib.dataset.DataSetListRequest;
+import com.wr.grpc.lib.dataset.Order;
+import com.wr.grpc.lib.dataset.OrderBy;
+import com.wr.localclient.model.po.CreateTable;
+import com.wr.localclient.service.DataSetService;
 import com.wr.localclient.service.DataSourceService;
 import com.wr.localclient.service.GrpcClientService;
 import com.wr.localclient.service.TableService;
+import io.grpc.Grpc;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author 王瑞
@@ -49,6 +55,24 @@ public class GrpcClientController {
         return tableService.testTableScheam();
     }
 
+
+    @Autowired
+    private DataSetService dataSetService;
+
+    @RequestMapping("/dataset/list")
+    public String dataSetList(@RequestParam(value = "createUser") String createUser,
+                              @RequestParam(value = "orderBy", required = false) OrderBy orderBy,
+                              @RequestParam(value = "order", required = false) Order order,
+                              @RequestParam(value = "page", required = false) Integer page,
+                              @RequestParam(value = "pageSize", required = false) Integer pageSize,
+                              @RequestParam(value = "keyword", required = false) String keyword) {
+        return dataSetService.testDataSetList(createUser, orderBy, order, page, pageSize, keyword);
+    }
+
+    @RequestMapping(value = "/dataset/create",method = RequestMethod.POST)
+    public String dataSetCreate(@RequestBody CreateTable[] createTables) {
+        return dataSetService.testDataSetCreate(createTables);
+    }
 
 }
 

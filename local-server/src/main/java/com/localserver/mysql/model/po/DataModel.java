@@ -4,16 +4,18 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @TableName("data_model")
 public class DataModel {
     private int id;
-    private String table_name;
-    private String field_name;
-    private int data_type;
-    private int view_type;
-    private int app_id;
+    private String tableName;
+    private String fieldName;
+    private int dataType;
+    private int viewType;
+    private int appId;
 }
