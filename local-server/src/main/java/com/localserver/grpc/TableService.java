@@ -1,17 +1,19 @@
 package com.localserver.grpc;
 
+import com.localserver.utils.MapToObj;
 import com.alibaba.fastjson.JSONObject;
-import com.localserver.clickhouse.model.po.PlaneInfo;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.localserver.clickhouse.service.IPlaneInfoService;
+import com.localserver.mysql.mapper.DataModelMapper;
+import com.localserver.mysql.mapper.DataSetMapper;
+import com.localserver.mysql.model.po.DataModel;
+import com.localserver.mysql.model.po.DataSet;
+import com.localserver.mysql.service.impl.TableServiceImpl;
 import com.wr.grpc.lib.BaseResp;
-import com.wr.grpc.lib.datasource.ListResponse;
 import com.wr.grpc.lib.table.*;
 import io.grpc.stub.StreamObserver;
-import io.swagger.annotations.ApiOperation;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.*;
 import java.util.zip.CheckedOutputStream;
@@ -24,7 +26,12 @@ import java.util.zip.CheckedOutputStream;
 public class TableService extends TableServiceGrpc.TableServiceImplBase {
     @Autowired
     private IPlaneInfoService iPlaneInfoService;
-
+    @Autowired
+    TableServiceImpl tableService;
+    @Autowired
+    DataSetMapper dataSetMapper;
+    @Autowired
+    DataModelMapper dataModelMapper;
     /**
      * 数据源下的所有表
      *
@@ -117,7 +124,74 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
      * @param responseObserver
      */
     @Override
-    public void info(DataTableInfoRequest request, StreamObserver<DataTableInfoResponse> responseObserver) {
-        super.info(request, responseObserver);
+    public void info(DataTableInfoRequest request, StreamObserver<DataTableInfoResponse> responseObserver) throws Exception {
+        BaseResp.Builder baseResp = BaseResp.newBuilder();
+        baseResp.setCode(200);
+        baseResp.setMessage("success");
+        DataTableInfoResponse.Builder response = DataTableInfoResponse.newBuilder();
+        //获取数据集信息
+        DataSet dataSet = dataSetMapper.selectById(request.getDatasetId());
+        //获取表元数据信息
+        List<DataModel> table_info = dataModelMapper.selectList(new QueryWrapper<DataModel>().eq("table_name", request.getDataTableId()));
+        //设置数据集信息
+        response.setCreateTime(dataSet.getCreateTime());
+        response.setCreateUser(dataSet.getCreateUser());
+        response.setName(dataSet.getDataName());
+        response.setDescr(dataSet.getDataDescr());
+        response.setId(String.valueOf(dataSet.getId()));
+        response.setDataSourceType(dataSet.getDataSourceType());
+        //设置数据表信息
+        response.setDbName("Ticket_info");
+        response.setTableName("plane_info");
+        response.setTableId("plane_info");
+        //构建指标集合和维度集合
+        Set<String> metricSet = new HashSet<>();
+        Set<String> dimensionSet = new HashSet<>();
+        for (DataModel table :table_info){
+            if (table.getDataType() ==0)
+                dimensionSet.add(table.getFieldName());
+            else
+                metricSet.add(table.getFieldName());
+        }
+        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema("Ticket_info", "plane_info");
+        for (Map<String, Object> map : tableSchema) {
+            Set<String> column = map.keySet();
+            int flag = 0;
+            Map<String,Object> column_info = new HashMap<>();
+            for (String next : column) {
+                if ("name".equals(next)) {
+                    String columnName = (String) map.get("name");
+                    column_info.put("name",columnName);
+                    if (metricSet.contains(columnName))
+                        flag = 0;
+                    else
+                        flag = 1;
+                }
+                if ("comment".equals(next)) {
+                    column_info.put("comment",(String) map.get("comment"));
+                }
+                if ("type".equals(next)) {
+                    column_info.put("descr",(String) map.get("type"));
+                }
+                if ("is_in_partition_key".equals(next)) {
+                    int value = (int) map.get("is_in_partition_key");
+                    if (value == 0) {
+                        column_info.put("isPartition",false);
+                    } else {
+                        column_info.put("isPartition",true);
+                    }
+                }
+
+            }
+
+            response.addSchema(MapToObj.mapToObj(column_info,Schema.Builder.class));
+            if (flag ==0)
+                response.addDimensionList(MapToObj.mapToObj(column_info,DimensionList.Builder.class));
+            else
+                response.addMetricList(MapToObj.mapToObj(column_info,MetricList.Builder.class));
+        }
+        response.setBaseResp(baseResp);
+        responseObserver.onNext(response.build());
+        responseObserver.onCompleted();
     }
 }

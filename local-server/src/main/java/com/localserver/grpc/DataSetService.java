@@ -1,27 +1,21 @@
 package com.localserver.grpc;
 
 import cn.hutool.core.date.DateTime;
-import com.alibaba.fastjson.JSONObject;
 import com.localserver.clickhouse.model.po.SchemaTable;
 import com.localserver.clickhouse.service.ISchemaService;
 import com.localserver.mysql.model.po.DataModel;
 import com.localserver.mysql.model.po.DataSet;
-import com.localserver.mysql.model.po.DatasetId;
 import com.localserver.mysql.service.IDataModelService;
 import com.localserver.mysql.service.IDatasetService;
+import com.localserver.mysql.service.impl.DataSetServiceImpl;
 import com.wr.grpc.lib.BaseResp;
 import com.wr.grpc.lib.dataset.*;
-import com.wr.grpc.lib.datasource.DataSourceServiceGrpc;
-import com.wr.grpc.lib.datasource.ListRequest;
-import com.wr.grpc.lib.datasource.ListResponse;
-import com.wr.grpc.lib.table.TableResponse;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,6 +35,8 @@ public class DataSetService extends DataSetServiceGrpc.DataSetServiceImplBase {
 
     @Autowired
     ISchemaService schemaService;
+    @Autowired
+    DataSetServiceImpl dataSetServiceImpl;
 
     /**
      * 数据集列表
@@ -167,6 +163,14 @@ public class DataSetService extends DataSetServiceGrpc.DataSetServiceImplBase {
      */
     @Override
     public void delete(DeleteDatasetRequest request, StreamObserver<DeleteDatasetResponse> responseObserver) {
-        super.delete(request, responseObserver);
+        BaseResp.Builder baseResp = BaseResp.newBuilder();
+        baseResp.setCode(200);
+        baseResp.setMessage("success");
+        DeleteDatasetResponse.Builder response = DeleteDatasetResponse.newBuilder();
+        response.setData(dataSetServiceImpl.DeleteDataSet(request.getId()));
+        response.setBaseResp(baseResp);
+        responseObserver.onNext(response.build());
+        responseObserver.onCompleted();
+
     }
 }

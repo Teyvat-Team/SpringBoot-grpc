@@ -1,12 +1,13 @@
 package com.localserver.mysql.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.localserver.mysql.model.po.DataModel;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
 @Mapper
-public interface DataModelMapper {
+public interface DataModelMapper extends BaseMapper<DataModel> {
     @Insert("INSERT INTO data_model(app_id,table_name,field_name,data_type,view_type) " +
             "VALUES(#{appId}, #{tableName}, #{fieldName},#{dataType},#{viewType})")
     @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id")

@@ -92,8 +92,6 @@ message DataTableInfoResponse {
     repeated DimensionList dimensionList = 11;
     // 指标
     repeated MetricList metricList = 12;
-    // 操作算子
-    repeated FunctionList functionList = 13;
     base.BaseResp baseResp = 255;
 }
 
@@ -109,9 +107,4 @@ message MetricList {
     string type = 2;
     string descr = 3;
     bool isPartition = 4;
-}
-
-message FunctionList {
-    string name = 1;
-    string value = 2;
 }

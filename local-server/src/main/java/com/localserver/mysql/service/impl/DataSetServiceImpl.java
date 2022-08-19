@@ -1,18 +1,22 @@
 package com.localserver.mysql.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.segments.MergeSegments;
 import com.localserver.mysql.mapper.DataModelMapper;
 import com.localserver.mysql.mapper.DataSetListMapper;
 import com.localserver.mysql.mapper.DataSetMapper;
+import com.localserver.mysql.model.po.DataModel;
 import com.localserver.mysql.model.po.DataSet;
 import com.localserver.mysql.service.IDatasetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Service
-public class DatasetServiceImpl implements IDatasetService {
+public class DataSetServiceImpl implements IDatasetService {
     @Autowired
     private DataSetMapper datasetMapper;
     @Autowired
@@ -36,6 +40,9 @@ public class DatasetServiceImpl implements IDatasetService {
 
     public Boolean DeleteDataSet(String id){
         int i = datasetMapper.deleteById(id);
+        final HashMap<String, Object> deleteMap = new HashMap<String, Object>();
+        deleteMap.put("app_id",id);
+        dataModelMapper.deleteByMap(deleteMap);
         return i != 0;
     }
 

@@ -181,7 +181,7 @@ public final class TableServiceGrpc {
      * </pre>
      */
     public void info(com.wr.grpc.lib.table.DataTableInfoRequest request,
-        io.grpc.stub.StreamObserver<com.wr.grpc.lib.table.DataTableInfoResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.wr.grpc.lib.table.DataTableInfoResponse> responseObserver) throws Exception {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInfoMethod(), responseObserver);
     }
 
