@@ -1,5 +1,7 @@
 package com.localserver.mysql.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.localserver.mysql.mapper.DataModelMapper;
 import com.localserver.mysql.mapper.DataSetListMapper;
 import com.localserver.mysql.mapper.DataSetMapper;
@@ -12,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class DatasetServiceImpl implements IDatasetService {
+public class DatasetServiceImpl extends ServiceImpl<DataSetMapper, DataSet> implements IDatasetService {
     @Autowired
     private DataSetMapper datasetMapper;
     @Autowired
@@ -37,6 +39,14 @@ public class DatasetServiceImpl implements IDatasetService {
     public Boolean DeleteDataSet(String id){
         int i = datasetMapper.deleteById(id);
         return i != 0;
+    }
+
+
+
+    @Override
+    public DataSet getOne(int id) {
+        DataSet dataSet = datasetMapper.selectOne(new QueryWrapper<DataSet>().eq("id", id));
+        return dataSet;
     }
 
 }

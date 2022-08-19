@@ -135,7 +135,7 @@ public class DataSetController {
     }
 
 
-//    @GetMapping("/list")
+    //    @GetMapping("/list")
 //    public String testRes() {
 //        System.out.println(personService + "值");
 //        List<Person> list = personService.list();
@@ -147,6 +147,28 @@ public class DataSetController {
 //        jsonObject.put("data", list);
 //        return jsonObject.toJSONString();
 //    }
+    @GetMapping("/q")
+    public String test() {
+        DataSet one = datasetservice.getOne(18);
+        return JSONObject.toJSONString(one);
+    }
 
+    @GetMapping("/w")
+    public void test1() {
+        List<String> dim = dataModelService.findDim(20);
+        for (String s : dim) {
+            System.out.print(s + " ");
+        }
+
+        System.out.println("-------------");
+        List<String> indi = dataModelService.findIndi(20);
+        for (String s : indi) {
+            System.out.print(s + " ");
+        }
+
+        System.out.println("-----------");
+        String s = dataModelService.tableInfo(20);
+        System.out.println(s);
+    }
 
 }

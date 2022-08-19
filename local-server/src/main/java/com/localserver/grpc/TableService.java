@@ -3,6 +3,9 @@ package com.localserver.grpc;
 import com.alibaba.fastjson.JSONObject;
 import com.localserver.clickhouse.model.po.PlaneInfo;
 import com.localserver.clickhouse.service.IPlaneInfoService;
+import com.localserver.mysql.model.po.DataSet;
+import com.localserver.mysql.service.IDataModelService;
+import com.localserver.mysql.service.IDatasetService;
 import com.wr.grpc.lib.BaseResp;
 import com.wr.grpc.lib.datasource.ListResponse;
 import com.wr.grpc.lib.table.*;
@@ -24,6 +27,12 @@ import java.util.zip.CheckedOutputStream;
 public class TableService extends TableServiceGrpc.TableServiceImplBase {
     @Autowired
     private IPlaneInfoService iPlaneInfoService;
+
+    @Autowired
+    private IDataModelService dataModelService;
+
+    @Autowired
+    private IDatasetService datasetService;
 
     /**
      * 数据源下的所有表
@@ -77,7 +86,7 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
 
         TableSchemaResponse.Builder response = TableSchemaResponse.newBuilder();
         // 表的结构信息
-        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema("Ticket_info", "plane_info");
+        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema(dbName, tableId);
         for (Map<String, Object> map : tableSchema) {
             Schema.Builder schema = Schema.newBuilder();
             Set<String> column = map.keySet();
@@ -118,6 +127,121 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
      */
     @Override
     public void info(DataTableInfoRequest request, StreamObserver<DataTableInfoResponse> responseObserver) {
-        super.info(request, responseObserver);
+        String datasetId = request.getDatasetId();
+        int id = Integer.parseInt(datasetId);
+        String tableName = request.getDataTableId();
+        //dataTableId 当做表名
+        DataSet dataSet = datasetService.getOne(id);
+        DataTableInfoResponse.Builder builder = DataTableInfoResponse.newBuilder();
+        // 数据集信息
+        builder.setCreateTime(dataSet.getCreateTime());
+        builder.setName(dataSet.getDataName());
+        builder.setDescr(dataSet.getDataDescr());
+        builder.setDataSourceType("clickhouse");
+        builder.setId(id + "");
+        builder.setCreateUser(dataSet.getCreateUser());
+        builder.setDbName(dataSet.getDbName());
+        builder.setTableName(tableName);
+        builder.setTableId(tableName);
+
+        // 表的结构信息
+        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema(dataSet.getDbName(), tableName);
+        for (Map<String, Object> map : tableSchema) {
+            Schema.Builder schema = Schema.newBuilder();
+            Set<String> column = map.keySet();
+            Iterator<String> iterator = column.iterator();
+            while (iterator.hasNext()) {
+                String next = iterator.next();
+                if ("name".equals(next)) {
+                    schema.setName((String) map.get("name"));
+                }
+                if ("comment".equals(next)) {
+                    schema.setDescr((String) map.get("comment"));
+                }
+                if ("type".equals(next)) {
+                    schema.setType((String) map.get("type"));
+                }
+                if ("is_in_partition_key".equals(next)) {
+                    int value = (int) map.get("is_in_partition_key");
+                    if (value == 0) {
+                        schema.setIsPartition(false);
+                    } else {
+                        schema.setIsPartition(true);
+                    }
+                }
+            }
+            builder.addSchema(schema);
+        }
+
+        // 维度列表
+        List<String> dim = dataModelService.findDim(id);
+
+        for (String s : dim) {
+            List<Map<String, Object>> tableSchema1 = iPlaneInfoService.findTableSchema(dataSet.getDbName(), tableName, s);
+            for (Map<String, Object> map : tableSchema1) {
+                DimensionList.Builder dimension = DimensionList.newBuilder();
+                Set<String> column = map.keySet();
+                Iterator<String> iterator = column.iterator();
+                while (iterator.hasNext()) {
+                    String next = iterator.next();
+                    if ("name".equals(next)) {
+                        dimension.setName((String) map.get("name"));
+                    }
+                    if ("comment".equals(next)) {
+                        dimension.setDescr((String) map.get("comment"));
+                    }
+                    if ("type".equals(next)) {
+                        dimension.setType((String) map.get("type"));
+                    }
+                    if ("is_in_partition_key".equals(next)) {
+                        int value = (int) map.get("is_in_partition_key");
+                        if (value == 0) {
+                            dimension.setIsPartition(false);
+                        } else {
+                            dimension.setIsPartition(true);
+                        }
+                    }
+                }
+                builder.addDimensionList(dimension);
+            }
+        }
+
+        // 指标列表
+        List<String> indicator = dataModelService.findIndi(id);
+
+        for (String s : indicator) {
+            List<Map<String, Object>> tableSchema1 = iPlaneInfoService.findTableSchema(dataSet.getDbName(), tableName, s);
+            for (Map<String, Object> map : tableSchema1) {
+                MetricList.Builder metric = MetricList.newBuilder();
+                Set<String> column = map.keySet();
+                Iterator<String> iterator = column.iterator();
+                while (iterator.hasNext()) {
+                    String next = iterator.next();
+                    if ("name".equals(next)) {
+                        metric.setName((String) map.get("name"));
+                    }
+                    if ("comment".equals(next)) {
+                        metric.setDescr((String) map.get("comment"));
+                    }
+                    if ("type".equals(next)) {
+                        metric.setType((String) map.get("type"));
+                    }
+                    if ("is_in_partition_key".equals(next)) {
+                        int value = (int) map.get("is_in_partition_key");
+                        if (value == 0) {
+                            metric.setIsPartition(false);
+                        } else {
+                            metric.setIsPartition(true);
+                        }
+                    }
+                }
+                builder.addMetricList(metric);
+            }
+        }
+
+
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
+
     }
 }
