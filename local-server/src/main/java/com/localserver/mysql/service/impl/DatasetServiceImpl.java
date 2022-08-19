@@ -2,7 +2,7 @@ package com.localserver.mysql.service.impl;
 
 import com.localserver.mysql.mapper.DataModelMapper;
 import com.localserver.mysql.mapper.DataSetListMapper;
-import com.localserver.mysql.mapper.DatasetMapper;
+import com.localserver.mysql.mapper.DataSetMapper;
 import com.localserver.mysql.model.po.DataSet;
 import com.localserver.mysql.service.IDatasetService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.util.Map;
 @Service
 public class DatasetServiceImpl implements IDatasetService {
     @Autowired
-    private DatasetMapper datasetMapper;
+    private DataSetMapper datasetMapper;
     @Autowired
     private DataSetListMapper dataSetListMapper;
     @Autowired
@@ -33,4 +33,10 @@ public class DatasetServiceImpl implements IDatasetService {
     public List<String> listTableByDatasetId(Integer datasetId) {
         return dataModelMapper.listTableByDatasetId(datasetId);
     }
+
+    public Boolean DeleteDataSet(String id){
+        int i = datasetMapper.deleteById(id);
+        return i != 0;
+    }
+
 }

@@ -27,7 +27,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/dataset")
 @ResponseBody
-public class DatasetController {
+public class DataSetController {
+
     @Autowired
     IDatasetService datasetservice;
 
@@ -147,5 +148,5 @@ public class DatasetController {
 //        return jsonObject.toJSONString();
 //    }
 
-}
 
+}

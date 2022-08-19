@@ -21,26 +21,31 @@ public class DataSetService {
     private DataSetServiceGrpc.DataSetServiceBlockingStub dataSetServiceBlockingStub;
 
     public String testDataSetCreate(CreateTable[] createTables) {
-        CreateDatasetRequest.Builder createDatasetRequestBuilder = CreateDatasetRequest.newBuilder();
-        for (CreateTable createTable : createTables) {
-            CreateTableList.Builder createTableListBuilder = CreateTableList.newBuilder();
-            createTableListBuilder.setName(createTable.getName());
-            createTableListBuilder.setDescr(createTable.getDescr());
-            createTableListBuilder.setDataSourceName(createTable.getDataSourceName());
-            createTableListBuilder.setDbName(createTable.getDbName());
-            createTableListBuilder.setTableId(createTable.getTableId());
-            createTableListBuilder.setCreateUser(createTable.getCreateUser());
+        try {
+            CreateDatasetRequest.Builder createDatasetRequestBuilder = CreateDatasetRequest.newBuilder();
+            for (CreateTable createTable : createTables) {
+                CreateTableList.Builder createTableListBuilder = CreateTableList.newBuilder();
+                createTableListBuilder.setName(createTable.getName());
+                createTableListBuilder.setDescr(createTable.getDescr());
+                createTableListBuilder.setDataSourceName(createTable.getDataSourceName());
+                createTableListBuilder.setDbName(createTable.getDbName());
+                createTableListBuilder.setTableId(createTable.getTableId());
+                createTableListBuilder.setCreateUser(createTable.getCreateUser());
 
-            Attr.Builder attrBuilder = Attr.newBuilder();
-            attrBuilder.addAllDimension(Arrays.asList(createTable.getAttr().getDimension()));
-            attrBuilder.addAllMatrix(Arrays.asList(createTable.getAttr().getMatrix()));
+                Attr.Builder attrBuilder = Attr.newBuilder();
+                attrBuilder.addAllDimension(Arrays.asList(createTable.getAttr().getDimension()));
+                attrBuilder.addAllMatrix(Arrays.asList(createTable.getAttr().getMatrix()));
 
-            createTableListBuilder.setAttr(attrBuilder);
+                createTableListBuilder.setAttr(attrBuilder);
 
-            createDatasetRequestBuilder.addCreateTableList(createTableListBuilder);
+                createDatasetRequestBuilder.addCreateTableList(createTableListBuilder);
+            }
+            CreateDatasetResponse response = dataSetServiceBlockingStub.create(createDatasetRequestBuilder.build());
+            return response.toString();
+
+        } catch (StatusRuntimeException e) {
+            return "FAILED with " + e.getStatus().getCode().name();
         }
-        CreateDatasetResponse response = dataSetServiceBlockingStub.create(createDatasetRequestBuilder.build());
-        return response.toString();
     }
 
     public String testDataSetList(String createUser, OrderBy orderBy, Order order, Integer page, Integer pageSize, String keyword) {
