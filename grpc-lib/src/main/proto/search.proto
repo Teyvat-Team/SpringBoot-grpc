@@ -25,7 +25,7 @@ message SearchInterfaceRequest {
 message SearchInterfaceResponse {
     string cost = 1;
     string sql = 2;
-    repeated Table data = 3;
+    repeated Rows table = 3;
     base.BaseResp baseResp = 255;
 }
 
@@ -34,8 +34,8 @@ message SelectList {
     string field = 2;
 }
 
-message Table {
-    repeated Row row = 1;
+message Rows {
+    repeated RowItem row = 1;
 }
 
 message Sort {
@@ -43,7 +43,7 @@ message Sort {
     string order = 2;
 }
 
-message Row {
+message RowItem {
     string key = 1;
     string value = 2;
 }
