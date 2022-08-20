@@ -45,9 +45,5 @@ public class DataModelServiceImpl extends ServiceImpl<DataModelMapper, DataModel
         return res;
     }
 
-    @Override
-    public String tableInfo(int id) {
-        String tableName = dataModelMapper.tableInfo(id);
-        return tableName;
-    }
+
 }

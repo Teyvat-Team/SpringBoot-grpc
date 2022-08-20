@@ -12,5 +12,4 @@ public interface IDataModelService extends IService<DataModel> {
 
     List<String> findIndi(int id);
 
-    String tableInfo(int id);
 }

@@ -1,7 +1,5 @@
 package com.localserver.grpc;
 
-import com.localserver.utils.MapToObj;
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.localserver.clickhouse.service.IPlaneInfoService;
 import com.localserver.mysql.mapper.DataModelMapper;
@@ -9,6 +7,7 @@ import com.localserver.mysql.mapper.DataSetMapper;
 import com.localserver.mysql.model.po.DataModel;
 import com.localserver.mysql.model.po.DataSet;
 import com.localserver.mysql.service.impl.TableServiceImpl;
+import com.localserver.utils.MapToObj;
 import com.wr.grpc.lib.BaseResp;
 import com.wr.grpc.lib.table.*;
 import io.grpc.stub.StreamObserver;
@@ -16,7 +15,6 @@ import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.*;
-import java.util.zip.CheckedOutputStream;
 
 /**
  * @author 王瑞
@@ -124,7 +122,7 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
      * @param responseObserver
      */
     @Override
-    public void info(DataTableInfoRequest request, StreamObserver<DataTableInfoResponse> responseObserver) throws Exception {
+    public void info(DataTableInfoRequest request, StreamObserver<DataTableInfoResponse> responseObserver)   {
         BaseResp.Builder baseResp = BaseResp.newBuilder();
         baseResp.setCode(200);
         baseResp.setMessage("success");
@@ -184,11 +182,15 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
 
             }
 
-            response.addSchema(MapToObj.mapToObj(column_info,Schema.Builder.class));
-            if (flag ==0)
-                response.addDimensionList(MapToObj.mapToObj(column_info,DimensionList.Builder.class));
-            else
-                response.addMetricList(MapToObj.mapToObj(column_info,MetricList.Builder.class));
+           try {
+               response.addSchema(MapToObj.mapToObj(column_info,Schema.Builder.class));
+               if (flag ==0)
+                   response.addDimensionList(MapToObj.mapToObj(column_info,DimensionList.Builder.class));
+               else
+                   response.addMetricList(MapToObj.mapToObj(column_info,MetricList.Builder.class));
+           } catch (Exception e) {
+
+           }
         }
         response.setBaseResp(baseResp);
         responseObserver.onNext(response.build());

@@ -167,8 +167,7 @@ public class DataSetController {
         }
 
         System.out.println("-----------");
-        String s = dataModelService.tableInfo(20);
-        System.out.println(s);
+
     }
 
 }
