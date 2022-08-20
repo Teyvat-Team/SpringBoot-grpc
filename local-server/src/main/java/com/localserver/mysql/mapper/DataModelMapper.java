@@ -13,6 +13,6 @@ public interface DataModelMapper extends BaseMapper<DataModel> {
     @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id")
     int insert(DataModel dataModel);
 
-    @Select("select table_name from data_model where app_id=#{dataset_id}")
+    @Select("select distinct table_name from data_model where app_id=#{dataset_id} ")
     List<String> listTableByDatasetId(@Param(value = "dataset_id") Integer datasetId);
 }

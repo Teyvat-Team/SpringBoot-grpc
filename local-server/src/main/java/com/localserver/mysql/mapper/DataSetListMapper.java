@@ -23,7 +23,7 @@ public interface DataSetListMapper {
         //动态构造查询语句
         public String queryLearnResouceByParams(Map<String, Object> params) {
             StringBuffer sql = new StringBuffer();
-            sql.append("select id,data_name,data_descr,data_source_type,db_name,create_user,create_time,status from data_set where create_user=").append(params.get("createUser"));
+            sql.append("select id,data_name,data_descr,data_source_type,db_name,create_user,create_time,status from data_set where create_user=").append("'").append(params.get("createUser")).append("'");
 //            sql.append("select * from data_set where create_user=111");
             if (!StringUtils.isEmpty((String) params.get("keyword"))) {
                 sql.append(" and data_name like '%").append((String) params.get("keyword")).append("%'");
@@ -38,7 +38,7 @@ public interface DataSetListMapper {
                 if (order == Order.desc)
                     sql.append(" desc ");
             }
-            if (params.get("page") != null && params.get("pageSize") != null) {
+            if ((int)params.get("page") != 0 && (int)params.get("pageSize") != 0) {
                 Integer page = (Integer) params.get("page");
                 Integer pageSize = (Integer) params.get("pageSize");
                 sql.append(" limit ").append(page).append(" offset ").append(pageSize * (page - 1));

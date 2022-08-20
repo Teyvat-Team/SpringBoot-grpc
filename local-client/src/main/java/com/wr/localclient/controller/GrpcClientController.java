@@ -52,6 +52,11 @@ public class GrpcClientController {
         // schema { name: "Id" type: "UInt32" } schema { name: "Airline" type: "String" }
         return tableService.testTableScheam();
     }
+    @RequestMapping("/table/info")
+    public String tableinfo() {
+        // schema { name: "Id" type: "UInt32" } schema { name: "Airline" type: "String" }
+        return tableService.tableInfo("24","plane_info");
+    }
 
 
     @Autowired

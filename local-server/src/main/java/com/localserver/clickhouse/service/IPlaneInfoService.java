@@ -20,7 +20,7 @@ public interface IPlaneInfoService extends IService<PlaneInfo> {
 
     List<String> findAllTables(String databaseName);
 
-    List<Map<String, Object>> findTableSchema(String databaseName, String tableName);
+    List<Map<String, Object>> findTableSchema1(String databaseName, String tableName);
 
-    List<Map<String, Object>> findTableSchema(String databaseName, String tableName, String column);
+    List<Map<String, Object>> findColumnInfo(String databaseName, String tableName, String column);
 }

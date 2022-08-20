@@ -6,6 +6,7 @@ import com.localserver.mysql.mapper.DataModelMapper;
 import com.localserver.mysql.mapper.DataSetMapper;
 import com.localserver.mysql.model.po.DataModel;
 import com.localserver.mysql.model.po.DataSet;
+import com.localserver.mysql.service.IDataModelService;
 import com.localserver.mysql.service.impl.TableServiceImpl;
 import com.localserver.utils.MapToObj;
 import com.wr.grpc.lib.BaseResp;
@@ -30,6 +31,8 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
     DataSetMapper dataSetMapper;
     @Autowired
     DataModelMapper dataModelMapper;
+    @Autowired
+    IDataModelService dataModelService;
     /**
      * 数据源下的所有表
      *
@@ -82,7 +85,7 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
 
         TableSchemaResponse.Builder response = TableSchemaResponse.newBuilder();
         // 表的结构信息
-        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema("Ticket_info", "plane_info");
+        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema1("Ticket_info", request.getTableId());
         for (Map<String, Object> map : tableSchema) {
             Schema.Builder schema = Schema.newBuilder();
             Set<String> column = map.keySet();
@@ -122,7 +125,7 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
      * @param responseObserver
      */
     @Override
-    public void info(DataTableInfoRequest request, StreamObserver<DataTableInfoResponse> responseObserver)   {
+    public void info(DataTableInfoRequest request, StreamObserver<DataTableInfoResponse> responseObserver){
         BaseResp.Builder baseResp = BaseResp.newBuilder();
         baseResp.setCode(200);
         baseResp.setMessage("success");
@@ -140,8 +143,8 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
         response.setDataSourceType(dataSet.getDataSourceType());
         //设置数据表信息
         response.setDbName("Ticket_info");
-        response.setTableName("plane_info");
-        response.setTableId("plane_info");
+        response.setTableName(response.getTableName());
+        response.setTableId(response.getTableName());
         //构建指标集合和维度集合
         Set<String> metricSet = new HashSet<>();
         Set<String> dimensionSet = new HashSet<>();
@@ -151,46 +154,118 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
             else
                 metricSet.add(table.getFieldName());
         }
-        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema("Ticket_info", "plane_info");
-        for (Map<String, Object> map : tableSchema) {
-            Set<String> column = map.keySet();
-            int flag = 0;
-            Map<String,Object> column_info = new HashMap<>();
-            for (String next : column) {
-                if ("name".equals(next)) {
-                    String columnName = (String) map.get("name");
-                    column_info.put("name",columnName);
-                    if (metricSet.contains(columnName))
-                        flag = 0;
-                    else
-                        flag = 1;
-                }
-                if ("comment".equals(next)) {
-                    column_info.put("comment",(String) map.get("comment"));
-                }
-                if ("type".equals(next)) {
-                    column_info.put("descr",(String) map.get("type"));
-                }
-                if ("is_in_partition_key".equals(next)) {
-                    int value = (int) map.get("is_in_partition_key");
-                    if (value == 0) {
-                        column_info.put("isPartition",false);
-                    } else {
-                        column_info.put("isPartition",true);
+//        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema("Ticket_info", request.getDataTableId());
+//        for (Map<String, Object> map : tableSchema) {
+//            Set<String> column = map.keySet();
+//            for (String next : column) {
+//                int flag = 0;
+//                Map<String,Object> column_info = new HashMap<>();
+//                if ("name".equals(next)) {
+//                    String columnName = (String) map.get("name");
+//                    column_info.put("name",columnName);
+//                    if (metricSet.contains(columnName))
+//                        flag = 0;
+//                    else
+//                        flag = 1;
+//                }
+//                if ("comment".equals(next)) {
+//                    column_info.put("comment",(String) map.get("comment"));
+//                }
+//                if ("type".equals(next)) {
+//                    column_info.put("descr",(String) map.get("type"));
+//                }
+//                if ("is_in_partition_key".equals(next)) {
+//                    int value = (int) map.get("is_in_partition_key");
+//                    if (value == 0) {
+//                        column_info.put("isPartition",false);
+//                    } else {
+//                        column_info.put("isPartition",true);
+//                    }
+//                }
+//                System.out.println(column_info);
+//                try{
+//                final Schema.Builder builderForValue2 = MapToObj.mapToObj(column_info, Schema.Builder.class);
+//                System.out.println(builderForValue2);
+//                response.addSchema(builderForValue2);
+//                if (flag ==0) {
+//                    final DimensionList.Builder builderForValue1 = MapToObj.mapToObj(column_info, DimensionList.Builder.class);
+//                    System.out.println(builderForValue1);
+//                    response.addDimensionList(builderForValue1);
+//                } else {
+//                    final MetricList.Builder builderForValue = MapToObj.mapToObj(column_info, MetricList.Builder.class);
+//                    System.out.println(builderForValue);
+//                    response.addMetricList(builderForValue);
+//                }}
+//
+//
+//            }
+//        }
+        List<String> dim = dataModelService.findDim(dataSet.getId());
+        for (String s : dim) {
+            List<Map<String, Object>> tableSchema1 = iPlaneInfoService.findColumnInfo("Ticket_info", "plane_info", s);
+            for (Map<String, Object> map : tableSchema1) { // 1次
+                System.out.println("---------------");
+                DimensionList.Builder dimension = DimensionList.newBuilder();
+                Set<Map.Entry<String, Object>> entries = map.entrySet();
+                Iterator<Map.Entry<String, Object>> iterator = entries.iterator();
+                while (iterator.hasNext()) {
+                    Map.Entry<String, Object> next = iterator.next();
+                    String key = next.getKey();
+                    System.out.println(next.getValue());
+                    if ("name".equals(key)) {
+                        dimension.setName((String) map.get("name"));
+                    }
+                    if ("comment".equals(key)) {
+                        dimension.setDescr((String) map.get("comment"));
+                    }
+                    if ("type".equals(key)) {
+                        dimension.setType((String) map.get("type"));
+                    }
+                    if ("is_in_partition_key".equals(key)) {
+                        int value = (int) map.get("is_in_partition_key");
+                        if (value == 0) {
+                            dimension.setIsPartition(false);
+                        } else {
+                            dimension.setIsPartition(true);
+                        }
                     }
                 }
-
+                response.addDimensionList(dimension);
             }
+        }
 
-           try {
-               response.addSchema(MapToObj.mapToObj(column_info,Schema.Builder.class));
-               if (flag ==0)
-                   response.addDimensionList(MapToObj.mapToObj(column_info,DimensionList.Builder.class));
-               else
-                   response.addMetricList(MapToObj.mapToObj(column_info,MetricList.Builder.class));
-           } catch (Exception e) {
-
-           }
+        List<String> indi = dataModelService.findIndi(dataSet.getId());
+        for (String s : indi) {
+            List<Map<String, Object>> tableSchema1 = iPlaneInfoService.findColumnInfo("Ticket_info", request.getDataTableId(), s);
+            for (Map<String, Object> map : tableSchema1) { // 1次
+                System.out.println("---------------");
+                MetricList.Builder metric = MetricList.newBuilder();
+                Set<Map.Entry<String, Object>> entries = map.entrySet();
+                Iterator<Map.Entry<String, Object>> iterator = entries.iterator();
+                while (iterator.hasNext()) {
+                    Map.Entry<String, Object> next = iterator.next();
+                    String key = next.getKey();
+                    System.out.println(next.getValue());
+                    if ("name".equals(key)) {
+                        metric.setName((String) map.get("name"));
+                    }
+                    if ("comment".equals(key)) {
+                        metric.setDescr((String) map.get("comment"));
+                    }
+                    if ("type".equals(key)) {
+                        metric.setType((String) map.get("type"));
+                    }
+                    if ("is_in_partition_key".equals(key)) {
+                        int value = (int) map.get("is_in_partition_key");
+                        if (value == 0) {
+                            metric.setIsPartition(false);
+                        } else {
+                            metric.setIsPartition(true);
+                        }
+                    }
+                }
+                response.addMetricList(metric);
+            }
         }
         response.setBaseResp(baseResp);
         responseObserver.onNext(response.build());

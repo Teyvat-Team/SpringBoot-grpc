@@ -36,12 +36,12 @@ public class PlaneInfoServiceImpl extends ServiceImpl<PlaneInfoMapper, PlaneInfo
     }
 
     @Override
-    public List<Map<String, Object>> findTableSchema(String databaseName, String tableName) {
+    public List<Map<String, Object>> findTableSchema1(String databaseName, String tableName) {
         return planeInfoMapper.findTableSchema(databaseName, tableName);
     }
 
     @Override
-    public List<Map<String, Object>> findTableSchema(String databaseName, String tableName, String column) {
-        return planeInfoMapper.findTableSchema(databaseName, tableName, column);
+    public List<Map<String, Object>> findColumnInfo(String databaseName, String tableName, String column) {
+        return planeInfoMapper.findColumnInfo(databaseName, tableName, column);
     }
 }

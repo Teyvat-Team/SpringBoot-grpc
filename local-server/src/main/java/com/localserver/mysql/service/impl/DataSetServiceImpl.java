@@ -32,6 +32,7 @@ public class DataSetServiceImpl extends ServiceImpl<DataSetMapper, DataSet> impl
 
     @Override
     public List<DataSet> listDataset(Map<String, Object> params) {
+        System.out.println(params);
         return dataSetListMapper.queryLearnResouceList(params);
     }
 

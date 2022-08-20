@@ -1,137 +1,780 @@
-2022-08-19 00:05:49.331 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 1.8.0_321 on DESKTOP-JIRMMOM with PID 15960 (E:\SpringBoot-grpc\local-server\target\classes started by 27937 in E:\SpringBoot-grpc)
-2022-08-19 00:05:49.353 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
-2022-08-19 00:05:49.786 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-08-19 00:10:59.550 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 1.8.0_321 on DESKTOP-JIRMMOM with PID 5512 (E:\SpringBoot-grpc\local-server\target\classes started by 27937 in E:\SpringBoot-grpc)
-2022-08-19 00:10:59.560 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
-2022-08-19 00:10:59.923 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-08-19 08:11:59.384 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 1.8.0_321 on DESKTOP-JIRMMOM with PID 6172 (E:\SpringBoot-grpc\local-server\target\classes started by 27937 in E:\SpringBoot-grpc)
-2022-08-19 08:11:59.394 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
-2022-08-19 08:12:00.075 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-08-19 08:19:03.408 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 1.8.0_321 on DESKTOP-JIRMMOM with PID 7344 (E:\SpringBoot-grpc\local-server\target\classes started by 27937 in E:\SpringBoot-grpc)
-2022-08-19 08:19:03.408 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
-2022-08-19 08:19:03.829 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-08-19 08:27:05.482 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 1.8.0_321 on DESKTOP-JIRMMOM with PID 8444 (E:\SpringBoot-grpc\local-server\target\classes started by 27937 in E:\SpringBoot-grpc)
-2022-08-19 08:27:05.487 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
-2022-08-19 08:27:07.947 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-19 08:27:07.947 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-08-19 08:27:07.997 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
-2022-08-19 08:27:09.239 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
-2022-08-19 08:27:09.259 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
-2022-08-19 08:27:09.259 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-19 08:27:09.259 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2022-08-19 08:27:09.429 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-19 08:27:09.429 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3859 ms
-2022-08-19 08:27:09.703 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
-2022-08-19 08:27:09.703 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
-2022-08-19 08:27:09.853 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
-2022-08-19 08:27:12.149 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
-2022-08-19 08:27:12.479 [main] INFO  org.redisson.Version - Redisson 3.10.4
-2022-08-19 08:27:15.216 [redisson-netty-1-26] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
-2022-08-19 08:27:15.996 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
-2022-08-19 08:27:17.317 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-2022-08-19 08:27:18.082 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
-2022-08-19 08:27:19.301 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
-2022-08-19 08:27:19.321 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
-2022-08-19 08:27:20.339 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$84f3ff86
-2022-08-19 08:27:20.339 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
-2022-08-19 08:27:20.339 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
-2022-08-19 08:27:20.339 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
-2022-08-19 08:27:20.339 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
-2022-08-19 08:27:20.339 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
-2022-08-19 08:27:20.339 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
-2022-08-19 08:27:20.339 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
-2022-08-19 08:27:21.991 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
-2022-08-19 08:27:22.025 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 17.701 seconds (JVM running for 19.985)
-2022-08-19 08:27:23.052 [RMI TCP Connection(6)-10.252.137.42] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-19 08:27:23.053 [RMI TCP Connection(6)-10.252.137.42] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2022-08-19 08:27:23.057 [RMI TCP Connection(6)-10.252.137.42] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2022-08-19 08:27:23.058 [RMI TCP Connection(5)-10.252.137.42] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2022-08-19 08:27:24.067 [RMI TCP Connection(5)-10.252.137.42] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2022-08-19 08:27:24.161 [RMI TCP Connection(5)-10.252.137.42] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2022-08-19 08:27:25.001 [RMI TCP Connection(5)-10.252.137.42] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2022-08-20 20:35:28.646 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 1.8.0_40 on DESKTOP-S0O9UKN with PID 26380 (C:\Users\xldream\Desktop\SpringBoot-grpc\local-server\target\classes started by xldream in C:\Users\xldream\Desktop\SpringBoot-grpc)
-2022-08-20 20:35:28.650 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
-2022-08-20 20:35:30.533 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-20 20:35:30.536 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-08-20 20:35:30.572 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
-2022-08-20 20:35:31.331 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
-2022-08-20 20:35:31.363 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
-2022-08-20 20:35:31.364 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-20 20:35:31.365 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2022-08-20 20:35:31.549 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-20 20:35:31.550 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2840 ms
-2022-08-20 20:35:31.711 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
-2022-08-20 20:35:31.715 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
-2022-08-20 20:35:31.823 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
-2022-08-20 20:35:33.786 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
-2022-08-20 20:35:34.002 [main] INFO  org.redisson.Version - Redisson 3.10.4
-2022-08-20 20:35:35.912 [redisson-netty-1-2] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
-2022-08-20 20:35:35.917 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
-2022-08-20 20:35:36.807 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-2022-08-20 20:35:37.191 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
-2022-08-20 20:35:37.852 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
-2022-08-20 20:35:37.866 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
-2022-08-20 20:35:38.391 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$85e16e64
-2022-08-20 20:35:38.391 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
-2022-08-20 20:35:38.391 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
-2022-08-20 20:35:38.391 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
-2022-08-20 20:35:38.391 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
-2022-08-20 20:35:38.392 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
-2022-08-20 20:35:38.392 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
-2022-08-20 20:35:38.392 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
-2022-08-20 20:35:39.658 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
-2022-08-20 20:35:39.673 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 11.724 seconds (JVM running for 13.495)
-2022-08-20 20:35:40.275 [RMI TCP Connection(1)-192.168.60.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-20 20:35:40.276 [RMI TCP Connection(1)-192.168.60.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2022-08-20 20:35:40.278 [RMI TCP Connection(1)-192.168.60.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2022-08-20 20:35:40.282 [RMI TCP Connection(2)-192.168.60.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2022-08-20 20:35:40.946 [RMI TCP Connection(2)-192.168.60.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2022-08-20 20:35:41.001 [RMI TCP Connection(2)-192.168.60.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2022-08-20 20:35:41.375 [RMI TCP Connection(2)-192.168.60.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2022-08-20 20:45:03.795 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 1.8.0_40 on DESKTOP-S0O9UKN with PID 25824 (C:\Users\xldream\Desktop\SpringBoot-grpc\local-server\target\classes started by xldream in C:\Users\xldream\Desktop\SpringBoot-grpc)
-2022-08-20 20:45:03.821 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
-2022-08-20 20:45:05.366 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-08-20 20:45:05.368 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-08-20 20:45:05.406 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2022-08-20 20:45:06.023 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
-2022-08-20 20:45:06.033 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
-2022-08-20 20:45:06.033 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-20 20:45:06.034 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2022-08-20 20:45:06.204 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-20 20:45:06.204 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2331 ms
-2022-08-20 20:45:06.343 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
-2022-08-20 20:45:06.345 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
-2022-08-20 20:45:06.423 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
-2022-08-20 20:45:08.217 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
-2022-08-20 20:45:08.392 [main] INFO  org.redisson.Version - Redisson 3.10.4
-2022-08-20 20:45:10.129 [redisson-netty-1-2] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
-2022-08-20 20:45:10.129 [redisson-netty-1-3] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
-2022-08-20 20:45:10.736 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-2022-08-20 20:45:11.113 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
-2022-08-20 20:45:11.739 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
-2022-08-20 20:45:11.749 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
-2022-08-20 20:45:12.219 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$ad4de32a
-2022-08-20 20:45:12.219 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
-2022-08-20 20:45:12.219 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
-2022-08-20 20:45:12.219 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
-2022-08-20 20:45:12.220 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
-2022-08-20 20:45:12.220 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
-2022-08-20 20:45:12.220 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
-2022-08-20 20:45:12.220 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
-2022-08-20 20:45:13.399 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
-2022-08-20 20:45:13.415 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 10.821 seconds (JVM running for 13.966)
-2022-08-20 20:45:13.740 [RMI TCP Connection(1)-192.168.60.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2022-08-20 20:45:14.276 [RMI TCP Connection(1)-192.168.60.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2022-08-20 20:45:14.331 [RMI TCP Connection(1)-192.168.60.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2022-08-20 20:45:14.726 [RMI TCP Connection(1)-192.168.60.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2022-08-20 20:45:14.839 [RMI TCP Connection(3)-192.168.60.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-20 20:45:14.839 [RMI TCP Connection(3)-192.168.60.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2022-08-20 20:45:14.841 [RMI TCP Connection(3)-192.168.60.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-08-21 00:23:02.154 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 14268 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 00:23:02.160 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 00:23:04.656 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 00:23:04.658 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 00:23:04.705 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
+2022-08-21 00:23:05.277 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 00:23:05.287 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:23:05.287 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 00:23:05.287 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 00:23:05.494 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 00:23:05.494 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3275 ms
+2022-08-21 00:23:05.640 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 00:23:05.647 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 00:23:05.720 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 00:23:06.417 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 00:23:06.553 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 00:23:07.273 [redisson-netty-1-29] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:23:07.273 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:23:07.794 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 00:23:08.092 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 00:23:08.421 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:23:08.431 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 00:23:08.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$1c2a6bbc
+2022-08-21 00:23:08.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 00:23:08.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 00:23:08.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 00:23:08.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 00:23:08.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 00:23:08.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 00:23:08.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 00:23:09.208 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 00:23:09.223 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 7.564 seconds (JVM running for 8.67)
+2022-08-21 00:23:09.658 [RMI TCP Connection(7)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 00:23:09.659 [RMI TCP Connection(7)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 00:23:09.660 [RMI TCP Connection(7)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 00:23:09.667 [RMI TCP Connection(8)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 00:23:10.071 [RMI TCP Connection(8)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 00:23:10.115 [RMI TCP Connection(8)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 00:23:10.445 [RMI TCP Connection(8)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 00:24:48.352 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 19064 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 00:24:48.355 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 00:24:49.814 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 00:24:49.816 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 00:24:49.857 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2022-08-21 00:24:50.443 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 00:24:50.453 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:24:50.453 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 00:24:50.454 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 00:24:50.614 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 00:24:50.614 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2215 ms
+2022-08-21 00:24:50.725 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 00:24:50.728 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 00:24:50.789 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 00:24:51.459 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 00:24:51.581 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 00:24:52.300 [redisson-netty-1-2] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:24:52.301 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:24:52.802 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 00:24:53.104 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 00:24:53.542 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:24:53.554 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 00:24:53.970 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$9d04be07
+2022-08-21 00:24:53.971 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 00:24:53.972 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 00:24:53.972 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 00:24:53.972 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 00:24:53.972 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 00:24:53.972 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 00:24:53.972 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 00:24:54.406 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 00:24:54.420 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.675 seconds (JVM running for 7.648)
+2022-08-21 00:24:54.679 [RMI TCP Connection(3)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 00:24:54.679 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 00:24:54.680 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 00:24:54.688 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 00:24:55.126 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 00:24:55.170 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 00:24:55.464 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 00:30:52.864 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 19768 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 00:30:52.869 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 00:30:54.023 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 00:30:54.026 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 00:30:54.065 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2022-08-21 00:30:54.628 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 00:30:54.636 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:30:54.637 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 00:30:54.637 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 00:30:54.798 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 00:30:54.798 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1895 ms
+2022-08-21 00:30:54.915 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 00:30:54.918 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 00:30:54.987 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 00:30:55.707 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 00:30:55.837 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 00:30:56.536 [redisson-netty-1-2] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:30:56.536 [redisson-netty-1-3] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:30:57.019 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 00:30:57.300 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 00:30:57.628 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:30:57.638 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 00:30:57.993 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$50e6dc8d
+2022-08-21 00:30:57.994 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 00:30:57.994 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 00:30:57.994 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 00:30:57.994 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 00:30:57.994 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 00:30:57.994 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 00:30:57.994 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 00:30:58.348 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 00:30:58.361 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 5.946 seconds (JVM running for 6.857)
+2022-08-21 00:30:58.565 [RMI TCP Connection(2)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 00:30:58.565 [RMI TCP Connection(2)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 00:30:58.566 [RMI TCP Connection(2)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 00:30:58.574 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 00:30:58.990 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 00:30:59.034 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 00:30:59.375 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 00:52:49.029 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 21236 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 00:52:49.031 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 00:52:50.285 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 00:52:50.287 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 00:52:50.325 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2022-08-21 00:52:50.836 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 00:52:50.845 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:52:50.845 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 00:52:50.846 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 00:52:51.011 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 00:52:51.011 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1948 ms
+2022-08-21 00:52:51.117 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 00:52:51.119 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 00:52:51.184 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 00:52:52.057 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 00:52:52.184 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 00:52:52.888 [redisson-netty-1-32] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:52:52.890 [redisson-netty-1-3] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:52:53.409 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 00:52:53.773 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 00:52:54.168 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:52:54.203 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 00:52:54.809 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$aafdeaca
+2022-08-21 00:52:54.809 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 00:52:54.810 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 00:52:54.810 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 00:52:54.810 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 00:52:54.810 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 00:52:54.810 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 00:52:54.810 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 00:52:55.356 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 00:52:55.377 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.801 seconds (JVM running for 7.762)
+2022-08-21 00:52:55.754 [RMI TCP Connection(7)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 00:52:55.754 [RMI TCP Connection(7)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 00:52:55.755 [RMI TCP Connection(7)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 00:52:55.766 [RMI TCP Connection(6)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 00:52:56.200 [RMI TCP Connection(6)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 00:52:56.252 [RMI TCP Connection(6)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 00:52:56.646 [RMI TCP Connection(6)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 00:56:42.363 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 21616 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 00:56:42.365 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 00:56:43.621 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 00:56:43.623 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 00:56:43.668 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2022-08-21 00:56:44.249 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 00:56:44.258 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:56:44.258 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 00:56:44.258 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 00:56:44.425 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 00:56:44.425 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2021 ms
+2022-08-21 00:56:44.539 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 00:56:44.542 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 00:56:44.607 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 00:56:45.267 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 00:56:45.390 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 00:56:46.092 [redisson-netty-1-28] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:56:46.093 [redisson-netty-1-30] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:56:46.585 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 00:56:46.904 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 00:56:47.277 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:56:47.290 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 00:56:47.701 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$9d04be07
+2022-08-21 00:56:47.701 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 00:56:47.702 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 00:56:47.702 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 00:56:47.702 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 00:56:47.702 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 00:56:47.702 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 00:56:47.702 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 00:56:48.076 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 00:56:48.089 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.298 seconds (JVM running for 7.269)
+2022-08-21 00:56:48.682 [RMI TCP Connection(4)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 00:56:48.682 [RMI TCP Connection(4)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 00:56:48.683 [RMI TCP Connection(4)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 00:56:48.692 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 00:56:49.149 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 00:56:49.203 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 00:56:49.550 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 00:57:34.075 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 1584 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 00:57:34.077 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 00:57:35.259 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 00:57:35.261 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 00:57:35.297 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2022-08-21 00:57:35.856 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 00:57:35.868 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:57:35.868 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 00:57:35.868 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 00:57:36.075 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 00:57:36.076 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1961 ms
+2022-08-21 00:57:36.192 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 00:57:36.195 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 00:57:36.254 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 00:57:36.928 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 00:57:37.073 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 00:57:37.778 [redisson-netty-1-3] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:57:37.778 [redisson-netty-1-2] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 00:57:38.264 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 00:57:38.544 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 00:57:38.875 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 00:57:38.884 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 00:57:39.249 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$aafdeaca
+2022-08-21 00:57:39.249 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 00:57:39.249 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 00:57:39.249 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 00:57:39.249 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 00:57:39.249 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 00:57:39.249 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 00:57:39.250 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 00:57:39.610 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 00:57:39.623 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.017 seconds (JVM running for 6.997)
+2022-08-21 00:57:39.899 [RMI TCP Connection(5)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 00:57:39.899 [RMI TCP Connection(5)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 00:57:39.901 [RMI TCP Connection(5)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-08-21 00:57:39.910 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 00:57:40.375 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 00:57:40.423 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 00:57:40.744 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 01:02:41.943 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 8804 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 01:02:41.946 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 01:02:43.178 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 01:02:43.180 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 01:02:43.223 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2022-08-21 01:02:43.786 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 01:02:43.797 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:02:43.797 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 01:02:43.798 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 01:02:43.963 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 01:02:43.963 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1984 ms
+2022-08-21 01:02:44.086 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 01:02:44.089 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 01:02:44.166 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 01:02:45.265 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 01:02:45.503 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 01:02:46.765 [redisson-netty-1-1] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:02:46.768 [redisson-netty-1-32] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:02:47.453 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 01:02:47.748 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 01:02:48.085 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:02:48.095 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 01:02:48.586 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$aafdeaca
+2022-08-21 01:02:48.586 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 01:02:48.586 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 01:02:48.586 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 01:02:48.586 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 01:02:48.586 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 01:02:48.587 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 01:02:48.587 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 01:02:48.995 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 01:02:49.010 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 7.558 seconds (JVM running for 8.508)
+2022-08-21 01:02:49.526 [RMI TCP Connection(10)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 01:02:49.526 [RMI TCP Connection(10)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 01:02:49.527 [RMI TCP Connection(10)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 01:02:49.535 [RMI TCP Connection(9)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 01:02:49.998 [RMI TCP Connection(9)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 01:02:50.046 [RMI TCP Connection(9)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 01:02:50.410 [RMI TCP Connection(9)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 01:14:58.396 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 21708 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 01:14:58.398 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 01:14:59.542 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 01:14:59.544 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 01:14:59.581 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2022-08-21 01:15:00.139 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 01:15:00.149 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:15:00.149 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 01:15:00.150 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 01:15:00.344 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 01:15:00.344 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1910 ms
+2022-08-21 01:15:00.453 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 01:15:00.456 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 01:15:00.518 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 01:15:01.179 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 01:15:01.296 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 01:15:02.006 [redisson-netty-1-30] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:15:02.008 [redisson-netty-1-32] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:15:02.491 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 01:15:02.796 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 01:15:03.192 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:15:03.202 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 01:15:03.561 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$aafdeaca
+2022-08-21 01:15:03.561 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 01:15:03.561 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 01:15:03.561 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 01:15:03.561 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 01:15:03.561 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 01:15:03.561 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 01:15:03.561 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 01:15:03.952 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 01:15:03.965 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.027 seconds (JVM running for 6.94)
+2022-08-21 01:15:04.639 [RMI TCP Connection(2)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 01:15:04.639 [RMI TCP Connection(2)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 01:15:04.642 [RMI TCP Connection(2)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2022-08-21 01:15:04.649 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 01:15:05.096 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 01:15:05.143 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 01:15:05.443 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 01:21:59.449 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 21696 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 01:21:59.452 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 01:22:00.684 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 01:22:00.686 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 01:22:00.726 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2022-08-21 01:22:01.322 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 01:22:01.331 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:22:01.331 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 01:22:01.332 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 01:22:01.496 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 01:22:01.497 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2008 ms
+2022-08-21 01:22:01.619 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 01:22:01.621 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 01:22:01.694 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 01:22:02.533 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 01:22:02.683 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 01:22:03.444 [redisson-netty-1-1] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:22:03.445 [redisson-netty-1-2] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:22:03.956 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 01:22:04.261 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 01:22:04.619 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:22:04.629 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 01:22:05.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$9d04be07
+2022-08-21 01:22:05.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 01:22:05.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 01:22:05.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 01:22:05.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 01:22:05.021 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 01:22:05.021 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 01:22:05.021 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 01:22:05.395 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 01:22:05.408 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.418 seconds (JVM running for 7.376)
+2022-08-21 01:22:05.969 [RMI TCP Connection(1)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 01:22:05.969 [RMI TCP Connection(1)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 01:22:05.972 [RMI TCP Connection(1)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2022-08-21 01:22:06.223 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 01:22:06.682 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 01:22:06.731 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 01:22:07.116 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 01:24:05.100 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 19800 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 01:24:05.103 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 01:24:06.447 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 01:24:06.450 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 01:24:06.489 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2022-08-21 01:24:07.048 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 01:24:07.058 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:24:07.058 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 01:24:07.058 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 01:24:07.233 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 01:24:07.233 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2080 ms
+2022-08-21 01:24:07.367 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 01:24:07.370 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 01:24:07.437 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 01:24:08.253 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 01:24:08.406 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 01:24:09.168 [redisson-netty-1-2] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:24:09.169 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:24:09.731 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 01:24:10.046 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 01:24:10.406 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:24:10.416 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 01:24:10.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$9d04be07
+2022-08-21 01:24:10.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 01:24:10.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 01:24:10.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 01:24:10.839 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 01:24:10.839 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 01:24:10.839 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 01:24:10.839 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 01:24:11.330 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 01:24:11.344 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.785 seconds (JVM running for 7.79)
+2022-08-21 01:24:11.772 [RMI TCP Connection(3)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 01:24:11.772 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 01:24:11.774 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-08-21 01:24:11.781 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 01:24:12.250 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 01:24:12.308 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 01:24:12.706 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 01:30:39.631 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 22008 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 01:30:39.634 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 01:30:40.859 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 01:30:40.861 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 01:30:40.899 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2022-08-21 01:30:41.433 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 01:30:41.442 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:30:41.442 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 01:30:41.443 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 01:30:41.603 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 01:30:41.603 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1936 ms
+2022-08-21 01:30:41.724 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 01:30:41.726 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 01:30:41.801 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 01:30:42.588 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 01:30:42.734 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 01:30:43.547 [redisson-netty-1-2] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:30:43.547 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:30:44.068 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 01:30:44.384 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 01:30:44.753 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:30:44.764 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 01:30:45.179 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$aafdeaca
+2022-08-21 01:30:45.179 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 01:30:45.179 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 01:30:45.179 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 01:30:45.179 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 01:30:45.179 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 01:30:45.179 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 01:30:45.179 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 01:30:45.573 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 01:30:45.585 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.418 seconds (JVM running for 7.529)
+2022-08-21 01:30:46.065 [RMI TCP Connection(1)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 01:30:46.065 [RMI TCP Connection(1)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 01:30:46.066 [RMI TCP Connection(1)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 01:30:46.073 [RMI TCP Connection(2)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 01:30:46.552 [RMI TCP Connection(2)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 01:30:46.606 [RMI TCP Connection(2)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 01:30:46.992 [RMI TCP Connection(2)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 01:37:01.444 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 21516 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 01:37:01.446 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 01:37:02.634 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 01:37:02.636 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 01:37:02.675 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2022-08-21 01:37:03.216 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 01:37:03.225 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:37:03.225 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 01:37:03.226 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 01:37:03.395 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 01:37:03.395 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1913 ms
+2022-08-21 01:37:03.508 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 01:37:03.511 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 01:37:03.581 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 01:37:04.319 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 01:37:04.450 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 01:37:05.198 [redisson-netty-1-1] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:37:05.199 [redisson-netty-1-3] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:37:05.697 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 01:37:06.015 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 01:37:06.422 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:37:06.434 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 01:37:06.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$aafdeaca
+2022-08-21 01:37:06.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 01:37:06.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 01:37:06.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 01:37:06.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 01:37:06.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 01:37:06.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 01:37:06.838 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 01:37:07.225 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 01:37:07.238 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.258 seconds (JVM running for 7.261)
+2022-08-21 01:37:07.665 [RMI TCP Connection(3)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 01:37:07.665 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 01:37:07.667 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-08-21 01:37:07.674 [RMI TCP Connection(2)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 01:37:08.145 [RMI TCP Connection(2)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 01:37:08.203 [RMI TCP Connection(2)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 01:37:08.537 [RMI TCP Connection(2)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 01:53:54.785 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 8540 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 01:53:54.788 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 01:53:56.170 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 01:53:56.172 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 01:53:56.215 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2022-08-21 01:53:56.804 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 01:53:56.812 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:53:56.814 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 01:53:56.814 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 01:53:57.007 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 01:53:57.007 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2171 ms
+2022-08-21 01:53:57.132 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 01:53:57.134 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 01:53:57.208 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 01:53:57.966 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 01:53:58.105 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 01:53:58.824 [redisson-netty-1-2] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:53:58.825 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 01:53:59.351 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 01:53:59.650 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 01:54:00.012 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 01:54:00.026 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 01:54:00.403 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$aafdeaca
+2022-08-21 01:54:00.403 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 01:54:00.403 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 01:54:00.403 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 01:54:00.403 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 01:54:00.403 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 01:54:00.403 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 01:54:00.403 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 01:54:00.794 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 01:54:00.812 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.561 seconds (JVM running for 7.704)
+2022-08-21 01:54:01.045 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 01:54:01.252 [RMI TCP Connection(3)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 01:54:01.252 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 01:54:01.254 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-08-21 01:54:01.463 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 01:54:01.506 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 01:54:01.876 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 02:00:03.744 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 9120 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 02:00:03.747 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 02:00:05.165 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 02:00:05.168 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 02:00:05.212 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2022-08-21 02:00:05.851 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 02:00:05.861 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 02:00:05.861 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 02:00:05.861 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 02:00:06.031 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 02:00:06.032 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2248 ms
+2022-08-21 02:00:06.143 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 02:00:06.145 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 02:00:06.212 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 02:00:06.917 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 02:00:07.047 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 02:00:07.865 [redisson-netty-1-32] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 02:00:07.867 [redisson-netty-1-3] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 02:00:08.442 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 02:00:08.780 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 02:00:09.174 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 02:00:09.186 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 02:00:09.604 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$aafdeaca
+2022-08-21 02:00:09.604 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 02:00:09.605 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 02:00:09.605 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 02:00:09.605 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 02:00:09.605 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 02:00:09.605 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 02:00:09.605 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 02:00:10.026 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 02:00:10.054 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.926 seconds (JVM running for 8.053)
+2022-08-21 02:00:10.328 [RMI TCP Connection(3)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 02:00:10.328 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 02:00:10.329 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 02:00:10.337 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 02:00:10.843 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 02:00:11.086 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 02:00:11.454 [RMI TCP Connection(4)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 02:13:04.102 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 4840 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 02:13:04.104 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 02:13:05.319 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 02:13:05.322 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 02:13:05.363 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2022-08-21 02:13:05.932 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 02:13:05.944 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 02:13:05.945 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 02:13:05.945 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 02:13:06.121 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 02:13:06.122 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1983 ms
+2022-08-21 02:13:06.263 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 02:13:06.266 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 02:13:06.345 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 02:13:07.065 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 02:13:07.192 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 02:13:08.033 [redisson-netty-1-2] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 02:13:08.035 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 02:13:08.566 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 02:13:08.880 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 02:13:09.248 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 02:13:09.258 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 02:13:09.710 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$9d04be07
+2022-08-21 02:13:09.710 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 02:13:09.710 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 02:13:09.710 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 02:13:09.711 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 02:13:09.711 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 02:13:09.711 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 02:13:09.711 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 02:13:10.100 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 02:13:10.114 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.487 seconds (JVM running for 7.476)
+2022-08-21 02:13:10.433 [RMI TCP Connection(4)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 02:13:10.434 [RMI TCP Connection(4)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 02:13:10.435 [RMI TCP Connection(4)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 02:13:10.442 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 02:13:10.888 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 02:13:10.948 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 02:13:11.302 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 02:20:07.598 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 16808 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 02:20:07.602 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 02:20:09.298 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 02:20:09.301 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 02:20:09.353 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 0 Redis repository interfaces.
+2022-08-21 02:20:10.047 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 02:20:10.064 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 02:20:10.064 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 02:20:10.065 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 02:20:10.272 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 02:20:10.272 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2601 ms
+2022-08-21 02:20:10.395 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 02:20:10.398 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 02:20:10.463 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 02:20:11.213 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 02:20:11.346 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 02:20:12.146 [redisson-netty-1-2] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 02:20:12.148 [redisson-netty-1-3] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 02:20:12.714 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 02:20:13.068 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 02:20:13.423 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 02:20:13.433 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 02:20:13.836 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$5e1d5460
+2022-08-21 02:20:13.836 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 02:20:13.836 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 02:20:13.836 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 02:20:13.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 02:20:13.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 02:20:13.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 02:20:13.837 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 02:20:14.210 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 02:20:14.223 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 7.243 seconds (JVM running for 8.512)
+2022-08-21 02:20:14.405 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 02:20:14.612 [RMI TCP Connection(5)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 02:20:14.612 [RMI TCP Connection(5)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 02:20:14.614 [RMI TCP Connection(5)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-08-21 02:20:14.830 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 02:20:14.873 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 02:20:15.201 [RMI TCP Connection(3)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 02:42:03.413 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 12052 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 02:42:03.415 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 02:42:04.780 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 02:42:04.782 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 02:42:04.820 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2022-08-21 02:42:05.391 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 02:42:05.400 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 02:42:05.401 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 02:42:05.401 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 02:42:05.578 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 02:42:05.578 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2114 ms
+2022-08-21 02:42:05.716 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 02:42:05.718 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 02:42:05.796 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 02:42:06.509 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 02:42:06.644 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 02:42:07.365 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 02:42:07.365 [redisson-netty-1-2] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 02:42:07.931 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 02:42:08.240 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 02:42:08.614 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 02:42:08.624 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 02:42:09.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$aafdeaca
+2022-08-21 02:42:09.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 02:42:09.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 02:42:09.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 02:42:09.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 02:42:09.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 02:42:09.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 02:42:09.020 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 02:42:09.377 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 02:42:09.391 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.577 seconds (JVM running for 7.663)
+2022-08-21 02:42:09.892 [RMI TCP Connection(3)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 02:42:09.892 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 02:42:09.894 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-08-21 02:42:10.126 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 02:42:10.571 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 02:42:10.631 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 02:42:11.034 [RMI TCP Connection(5)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 03:00:44.026 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 10548 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 03:00:44.029 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 03:00:45.209 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 03:00:45.212 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 03:00:45.248 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2022-08-21 03:00:45.783 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 03:00:45.792 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 03:00:45.792 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 03:00:45.793 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 03:00:45.951 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 03:00:45.952 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1875 ms
+2022-08-21 03:00:46.060 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 03:00:46.062 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 03:00:46.125 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 03:00:46.818 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 03:00:46.971 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 03:00:47.697 [redisson-netty-1-28] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 03:00:47.701 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 03:00:48.204 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 03:00:48.511 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 03:00:48.856 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 03:00:48.866 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 03:00:49.296 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$ce485ade
+2022-08-21 03:00:49.296 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 03:00:49.297 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 03:00:49.297 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 03:00:49.297 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 03:00:49.297 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 03:00:49.297 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 03:00:49.297 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 03:00:49.716 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 03:00:49.730 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.14 seconds (JVM running for 7.108)
+2022-08-21 03:00:50.180 [RMI TCP Connection(5)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 03:00:50.180 [RMI TCP Connection(5)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 03:00:50.182 [RMI TCP Connection(5)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-08-21 03:00:50.436 [RMI TCP Connection(7)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 03:00:50.869 [RMI TCP Connection(7)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 03:00:50.912 [RMI TCP Connection(7)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 03:00:51.235 [RMI TCP Connection(7)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 03:06:06.931 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 20020 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 03:06:06.933 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 03:06:08.136 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 03:06:08.138 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 03:06:08.179 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2022-08-21 03:06:08.732 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 03:06:08.742 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 03:06:08.742 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 03:06:08.743 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 03:06:08.907 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 03:06:08.907 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1936 ms
+2022-08-21 03:06:09.024 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 03:06:09.026 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 03:06:09.092 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 03:06:09.806 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 03:06:09.961 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 03:06:10.751 [redisson-netty-1-32] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 03:06:10.752 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 03:06:11.262 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 03:06:11.584 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 03:06:11.971 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 03:06:11.981 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 03:06:12.385 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$9d04be07
+2022-08-21 03:06:12.385 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 03:06:12.385 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 03:06:12.385 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 03:06:12.385 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 03:06:12.385 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 03:06:12.385 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 03:06:12.385 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 03:06:12.775 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 03:06:12.787 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.337 seconds (JVM running for 7.347)
+2022-08-21 03:06:12.920 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 03:06:13.123 [RMI TCP Connection(3)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 03:06:13.123 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 03:06:13.125 [RMI TCP Connection(3)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-08-21 03:06:13.359 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 03:06:13.405 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 03:06:13.849 [RMI TCP Connection(1)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-08-21 03:49:35.107 [main] INFO  com.localserver.LocalServerApplication - Starting LocalServerApplication using Java 13.0.1 on LAPTOP-M74D00VF with PID 18216 (C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc\local-server\target\classes started by 86182 in C:\Users\86182\Desktop\coding\projects\java\SpringBoot-grpc)
+2022-08-21 03:49:35.109 [main] INFO  com.localserver.LocalServerApplication - The following profiles are active: dev
+2022-08-21 03:49:36.498 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-21 03:49:36.501 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-21 03:49:36.539 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2022-08-21 03:49:37.151 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2022-08-21 03:49:37.163 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2022-08-21 03:49:37.164 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-21 03:49:37.164 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-08-21 03:49:37.374 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-21 03:49:37.375 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2229 ms
+2022-08-21 03:49:37.503 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2022-08-21 03:49:37.506 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2022-08-21 03:49:37.573 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-08-21 03:49:38.303 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final io.grpc.ServerServiceDefinition com.wr.grpc.lib.dataset.DataSetServiceGrpc$DataSetServiceImplBase.bindService()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-08-21 03:49:38.444 [main] INFO  org.redisson.Version - Redisson 3.10.4
+2022-08-21 03:49:39.197 [redisson-netty-1-2] INFO  o.r.connection.pool.MasterPubSubConnectionPool - 1 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 03:49:39.198 [redisson-netty-1-3] INFO  org.redisson.connection.pool.MasterConnectionPool - 32 connections initialized for 162.14.78.202/162.14.78.202:6379
+2022-08-21 03:49:39.726 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-21 03:49:40.035 [main] INFO  n.d.b.g.s.a.GrpcServerFactoryAutoConfiguration - Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2022-08-21 03:49:40.412 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2022-08-21 03:49:40.429 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-21 03:49:40.923 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: dataset.DataSetService, bean: dataSetService, class: com.localserver.grpc.DataSetService$$EnhancerBySpringCGLIB$$d4329855
+2022-08-21 03:49:40.923 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: db.DbService, bean: dbService, class: com.localserver.grpc.DbService
+2022-08-21 03:49:40.923 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: search.SearchService, bean: searchService, class: com.localserver.grpc.SearchService
+2022-08-21 03:49:40.923 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: table.TableService, bean: tableService, class: com.localserver.grpc.TableService
+2022-08-21 03:49:40.923 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: datasource.DataSourceService, bean: dataSourceServiceImpl, class: com.localserver.mysql.service.impl.DataSourceServiceImpl
+2022-08-21 03:49:40.923 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: Simple, bean: grpcServerService, class: com.localserver.mysql.service.impl.GrpcServerService
+2022-08-21 03:49:40.924 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.services.HealthServiceImpl
+2022-08-21 03:49:40.924 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2022-08-21 03:49:41.362 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 50051
+2022-08-21 03:49:41.378 [main] INFO  com.localserver.LocalServerApplication - Started LocalServerApplication in 6.829 seconds (JVM running for 7.971)
+2022-08-21 03:49:41.750 [RMI TCP Connection(9)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-21 03:49:41.935 [RMI TCP Connection(11)-192.168.0.102] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 03:49:41.936 [RMI TCP Connection(11)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-21 03:49:41.937 [RMI TCP Connection(11)-192.168.0.102] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-08-21 03:49:42.236 [RMI TCP Connection(9)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-21 03:49:42.282 [RMI TCP Connection(9)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-08-21 03:49:42.748 [RMI TCP Connection(9)-192.168.0.102] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.

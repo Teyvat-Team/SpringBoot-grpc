@@ -34,7 +34,18 @@ public class SearchService extends SearchServiceGrpc.SearchServiceImplBase {
         StringBuilder sql = new StringBuilder("select ");
         List<SelectList> selectLists = request.getSelectListList();
         Map<String, String> mp = new HashMap<>();
-        int length = selectLists.size()-1;
+        int length = request.getGroupByListCount()-1;
+        if (length >= 0) {
+            for (int i = 0; i < length; i++) {
+                sql.append(request.getGroupByList(i) + ",");
+            }
+            if (selectLists.size() == 0)
+                sql.append(request.getGroupByList(length) + " ");
+            else
+                sql.append(request.getGroupByList(length) + ", ");
+        }
+
+        length = selectLists.size()-1;
         if (length >= 0) {
             for (int i = 0; i < length; i++) {
                 sql.append(selectLists.get(i).getFunction() + "(" + selectLists.get(i).getField() + "), ");

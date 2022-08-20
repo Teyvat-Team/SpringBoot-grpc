@@ -43,5 +43,19 @@ public class TableService {
             return "FAILED with " + e.getStatus().getCode().name();
         }
     }
+    public String tableInfo(String datasetId,String tableId) {
+        try {
+            // 1.构建请求消息
+            DataTableInfoRequest request = DataTableInfoRequest.newBuilder().setDatasetId(datasetId).setDataTableId(tableId).build();
+            // 2.调用远程方法
+            DataTableInfoResponse response =
+                    tableServiceBlockingStub.info(request);
+            // 3.返回结果
+            return response.toString();
+        } catch (StatusRuntimeException e) {
+            return "FAILED with " + e.getStatus().getCode().name();
+        }
+    }
+
 
 }

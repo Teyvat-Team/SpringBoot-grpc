@@ -53,7 +53,7 @@ public class PlaneInfoController {
     @ApiOperation("查询表的结构")
     @GetMapping("/schema")
     public String findTables(@RequestParam("databaseName") String databaseName, @RequestParam("tableName") String tableName) {
-        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema(databaseName, tableName);
+        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema1(databaseName, tableName);
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("data", tableSchema);
         return jsonObject.toJSONString();

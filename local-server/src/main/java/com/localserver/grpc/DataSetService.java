@@ -57,7 +57,7 @@ public class DataSetService extends DataSetServiceGrpc.DataSetServiceImplBase {
         params.put("page", request.getPage());
         params.put("pageSize", request.getPageSize());
         params.put("keyword", request.getKeyword());
-//        System.out.println(params+"-----------------------------");
+        System.out.println(params+"-----------------------------");
         List<DataSet> datasets = datasetservice.listDataset(params);
         DataSetListResponse.Builder dataSetListResponseBuilder = DataSetListResponse.newBuilder();
         for (int i = 0; i < datasets.size(); i++) {
