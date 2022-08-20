@@ -3,11 +3,9 @@ package com.wr.localclient.controller;
 import com.wr.grpc.lib.dataset.DataSetListRequest;
 import com.wr.grpc.lib.dataset.Order;
 import com.wr.grpc.lib.dataset.OrderBy;
+import com.wr.grpc.lib.search.SearchInterfaceRequest;
 import com.wr.localclient.model.po.CreateTable;
-import com.wr.localclient.service.DataSetService;
-import com.wr.localclient.service.DataSourceService;
-import com.wr.localclient.service.GrpcClientService;
-import com.wr.localclient.service.TableService;
+import com.wr.localclient.service.*;
 import io.grpc.Grpc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -72,6 +70,13 @@ public class GrpcClientController {
     @RequestMapping(value = "/dataset/create",method = RequestMethod.POST)
     public String dataSetCreate(@RequestBody CreateTable[] createTables) {
         return dataSetService.testDataSetCreate(createTables);
+    }
+
+    @Autowired
+    private SearchService searchService;
+    @RequestMapping(value = "/search", method = RequestMethod.POST)
+    public String getSearch(@RequestBody SearchInterfaceRequest request) {
+        return searchService.sendMessage(request);
     }
 
 }
