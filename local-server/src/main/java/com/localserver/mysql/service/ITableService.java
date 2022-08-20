@@ -1,7 +1,7 @@
 package com.localserver.mysql.service;
 
 import com.localserver.mysql.model.po.DataModel;
-import com.wr.grpc.lib.search.Table;
+import com.wr.grpc.lib.search.Rows;
 
 import java.util.List;
 
