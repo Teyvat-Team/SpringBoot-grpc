@@ -6,7 +6,6 @@ import com.wr.grpc.lib.dataset.OrderBy;
 import com.wr.grpc.lib.search.SearchInterfaceRequest;
 import com.wr.localclient.model.po.CreateTable;
 import com.wr.localclient.service.*;
-import io.grpc.Grpc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -55,7 +54,7 @@ public class GrpcClientController {
     @RequestMapping("/table/info")
     public String tableinfo() {
         // schema { name: "Id" type: "UInt32" } schema { name: "Airline" type: "String" }
-        return tableService.tableInfo("24","plane_info");
+        return tableService.tableInfo("25","plane_info");
     }
 
 

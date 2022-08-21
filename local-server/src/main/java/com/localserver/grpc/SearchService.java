@@ -7,6 +7,9 @@ import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 
 import javax.management.Query;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -92,8 +95,27 @@ public class SearchService extends SearchServiceGrpc.SearchServiceImplBase {
             //5.执行sql
             long stime = System.currentTimeMillis();
             resultSet = statement.executeQuery(sql.toString());
+            System.out.println(sql.toString());
+            System.out.println("1145141919810");
+
+
+
             long etime = System.currentTimeMillis();
             builder.setCost(String.valueOf(etime-stime));  // 查找花费时间
+            try{
+
+                String content = sql.toString();
+                File file =new File("sqlexecuterecord.txt");
+                if(!file.exists()){
+                    file.createNewFile();
+                }
+                FileWriter fileWritter = new FileWriter(file.getName()+"\n"+stime+"\n"+etime+"\n",true);
+                fileWritter.write(content);
+                fileWritter.close();
+                System.out.println("finish");
+            }catch(IOException e){
+                e.printStackTrace();
+            }
             builder.setSql(sql.toString());
             ResultSetMetaData rsmd = resultSet.getMetaData();
 
@@ -114,6 +136,10 @@ public class SearchService extends SearchServiceGrpc.SearchServiceImplBase {
             responseObserver.onNext(response);
             responseObserver.onCompleted();
         }catch (Exception e) {
+            BaseResp.Builder success = BaseResp.newBuilder().setCode(404).setMessage("不支持的sql操作");
+            SearchInterfaceResponse response = builder.setBaseResp(success).build();
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
             System.out.println(e.getMessage());
         } finally {
             ClickHouseJDBC.close(statement, connection, resultSet);

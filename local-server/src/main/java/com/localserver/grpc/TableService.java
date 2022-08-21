@@ -132,8 +132,9 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
         DataTableInfoResponse.Builder response = DataTableInfoResponse.newBuilder();
         //获取数据集信息
         DataSet dataSet = dataSetMapper.selectById(request.getDatasetId());
+        System.out.println(request.getDatasetId());
         //获取表元数据信息
-        List<DataModel> table_info = dataModelMapper.selectList(new QueryWrapper<DataModel>().eq("table_name", request.getDataTableId()));
+        //List<DataModel> table_info = dataModelMapper.selectList(new QueryWrapper<DataModel>().eq("table_name", request.getDataTableId()));
         //设置数据集信息
         response.setCreateTime(dataSet.getCreateTime());
         response.setCreateUser(dataSet.getCreateUser());
@@ -143,17 +144,48 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
         response.setDataSourceType(dataSet.getDataSourceType());
         //设置数据表信息
         response.setDbName("Ticket_info");
-        response.setTableName(response.getTableName());
-        response.setTableId(response.getTableName());
-        //构建指标集合和维度集合
-        Set<String> metricSet = new HashSet<>();
-        Set<String> dimensionSet = new HashSet<>();
-        for (DataModel table :table_info){
-            if (table.getDataType() ==0)
-                dimensionSet.add(table.getFieldName());
-            else
-                metricSet.add(table.getFieldName());
+        response.setTableName(request.getDataTableId());
+        response.setTableId(request.getDataTableId());
+
+        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema1("Ticket_info", request.getDataTableId());
+        for (Map<String, Object> map : tableSchema) {
+            Schema.Builder schema = Schema.newBuilder();
+            Set<String> column = map.keySet();
+            Iterator<String> iterator = column.iterator();
+            while (iterator.hasNext()) {
+                String next = iterator.next();
+                if ("name".equals(next)) {
+                    schema.setName((String) map.get("name"));
+                }
+                if ("comment".equals(next)) {
+                    schema.setDescr((String) map.get("comment"));
+                }
+                if ("type".equals(next)) {
+                    schema.setType((String) map.get("type"));
+                }
+                if ("is_in_partition_key".equals(next)) {
+                    int value = (int) map.get("is_in_partition_key");
+                    if (value == 0) {
+                        schema.setIsPartition(false);
+                    } else {
+                        schema.setIsPartition(true);
+                    }
+                }
+            }
+            response.addSchema(schema);
         }
+
+        //构建指标集合和维度集合
+//        Set<String> metricSet = new HashSet<>();
+//        Set<String> dimensionSet = new HashSet<>();
+//        for (DataModel table :table_info){
+//            if (table.getDataType() ==0)
+//                dimensionSet.add(table.getFieldName());
+//            else
+//                metricSet.add(table.getFieldName());
+//        }
+
+
 //        List<Map<String, Object>> tableSchema = iPlaneInfoService.findTableSchema("Ticket_info", request.getDataTableId());
 //        for (Map<String, Object> map : tableSchema) {
 //            Set<String> column = map.keySet();
@@ -200,9 +232,10 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
 //
 //            }
 //        }
-        List<String> dim = dataModelService.findDim(dataSet.getId());
+        List<String> dim = dataModelService.findDim4one(dataSet.getId(),request.getDataTableId());
+        System.out.println(dim);
         for (String s : dim) {
-            List<Map<String, Object>> tableSchema1 = iPlaneInfoService.findColumnInfo("Ticket_info", "plane_info", s);
+            List<Map<String, Object>> tableSchema1 = iPlaneInfoService.findColumnInfo("Ticket_info", request.getDataTableId(), s);
             for (Map<String, Object> map : tableSchema1) { // 1次
                 System.out.println("---------------");
                 DimensionList.Builder dimension = DimensionList.newBuilder();
@@ -234,7 +267,8 @@ public class TableService extends TableServiceGrpc.TableServiceImplBase {
             }
         }
 
-        List<String> indi = dataModelService.findIndi(dataSet.getId());
+        List<String> indi = dataModelService.findIndi4one(dataSet.getId(),request.getDataTableId());
+        System.out.println(indi);
         for (String s : indi) {
             List<Map<String, Object>> tableSchema1 = iPlaneInfoService.findColumnInfo("Ticket_info", request.getDataTableId(), s);
             for (Map<String, Object> map : tableSchema1) { // 1次

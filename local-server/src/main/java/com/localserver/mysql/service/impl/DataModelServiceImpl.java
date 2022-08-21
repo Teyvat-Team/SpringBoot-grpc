@@ -32,11 +32,33 @@ public class DataModelServiceImpl extends ServiceImpl<DataModelMapper, DataModel
         }
         return res;
     }
+    @Override
+    public List<String> findDim4one(int id, String tablename) {
+        QueryWrapper<DataModel> wrapper = new QueryWrapper<DataModel>()
+                .eq("data_type", 0).eq("app_id", id).eq("table_name",tablename);
+        List<DataModel> dataModels = dataModelMapper.selectList(wrapper);
+        List<String> res = new ArrayList<>();
+        for (DataModel dataModel : dataModels) {
+            res.add(dataModel.getFieldName());
+        }
+        return res;
+    }
 
     @Override
     public List<String> findIndi(int id) {
         QueryWrapper<DataModel> wrapper = new QueryWrapper<DataModel>()
                 .eq("data_type", 1).eq("app_id", id);
+        List<DataModel> dataModels = dataModelMapper.selectList(wrapper);
+        List<String> res = new ArrayList<>();
+        for (DataModel dataModel : dataModels) {
+            res.add(dataModel.getFieldName());
+        }
+        return res;
+    }
+    @Override
+    public List<String> findIndi4one(int id,String tablename) {
+        QueryWrapper<DataModel> wrapper = new QueryWrapper<DataModel>()
+                .eq("data_type", 1).eq("app_id", id).eq("table_name",tablename);
         List<DataModel> dataModels = dataModelMapper.selectList(wrapper);
         List<String> res = new ArrayList<>();
         for (DataModel dataModel : dataModels) {
