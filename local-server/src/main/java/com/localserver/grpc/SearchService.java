@@ -83,6 +83,9 @@ public class SearchService extends SearchServiceGrpc.SearchServiceImplBase {
                 str = mp.get(str) + "("+str+")";
             sql.append(str+ " "+ request.getSort(length).getOrder());
         }
+        // 求总的记录数的sql语句
+        String sqlcount = new String("select count(*) from (" + sql.toString() + ")");
+
         sql.append(" limit " + request.getOffset() + "," + request.getLimit());
 
         SearchInterfaceResponse.Builder builder = SearchInterfaceResponse.newBuilder();
@@ -93,16 +96,15 @@ public class SearchService extends SearchServiceGrpc.SearchServiceImplBase {
         try {
             connection= ClickHouseJDBC.getConnection();
             statement = connection.createStatement();
+             // 求总行数
+            ResultSet rs = statement.executeQuery(sqlcount.toString());
+            rs.next();
+            int total = rs.getInt(1);
+            builder.setTotal(total);
             //5.执行sql
             long stime = System.currentTimeMillis();
-
-
             resultSet = statement.executeQuery(sql.toString());
             long etime = System.currentTimeMillis();
-            resultSet.last();
-            int rowCount = resultSet.getRow();  // 获取total
-            resultSet.beforeFirst();
-            builder.setTotal(rowCount);
             builder.setCost(String.valueOf(etime-stime));  // 查找花费时间
             try{
 
