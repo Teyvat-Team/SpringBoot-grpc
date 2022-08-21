@@ -121,4 +121,16 @@ public interface SearchInterfaceRequestOrBuilder extends
    */
   com.wr.grpc.lib.search.SortOrBuilder getSortOrBuilder(
       int index);
+
+  /**
+   * <code>int32 offset = 8;</code>
+   * @return The offset.
+   */
+  int getOffset();
+
+  /**
+   * <code>int32 limit = 9;</code>
+   * @return The limit.
+   */
+  int getLimit();
 }

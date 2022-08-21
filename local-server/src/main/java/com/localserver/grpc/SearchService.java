@@ -83,6 +83,7 @@ public class SearchService extends SearchServiceGrpc.SearchServiceImplBase {
                 str = mp.get(str) + "("+str+")";
             sql.append(str+ " "+ request.getSort(length).getOrder());
         }
+        sql.append(" limit " + request.getOffset() + "," + request.getLimit());
 
         SearchInterfaceResponse.Builder builder = SearchInterfaceResponse.newBuilder();
         List<Rows> table = new ArrayList<>();
@@ -94,13 +95,14 @@ public class SearchService extends SearchServiceGrpc.SearchServiceImplBase {
             statement = connection.createStatement();
             //5.执行sql
             long stime = System.currentTimeMillis();
+
+
             resultSet = statement.executeQuery(sql.toString());
-            System.out.println(sql.toString());
-            System.out.println("1145141919810");
-
-
-
             long etime = System.currentTimeMillis();
+            resultSet.last();
+            int rowCount = resultSet.getRow();  // 获取total
+            resultSet.beforeFirst();
+            builder.setTotal(rowCount);
             builder.setCost(String.valueOf(etime-stime));  // 查找花费时间
             try{
 

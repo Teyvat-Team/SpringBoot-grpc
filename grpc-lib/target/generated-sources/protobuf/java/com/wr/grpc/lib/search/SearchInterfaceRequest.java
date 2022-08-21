@@ -105,6 +105,16 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(com.wr.grpc.lib.search.Sort.parser(), extensionRegistry));
             break;
           }
+          case 64: {
+
+            offset_ = input.readInt32();
+            break;
+          }
+          case 72: {
+
+            limit_ = input.readInt32();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -386,6 +396,28 @@ private static final long serialVersionUID = 0L;
     return sort_.get(index);
   }
 
+  public static final int OFFSET_FIELD_NUMBER = 8;
+  private int offset_;
+  /**
+   * <code>int32 offset = 8;</code>
+   * @return The offset.
+   */
+  @java.lang.Override
+  public int getOffset() {
+    return offset_;
+  }
+
+  public static final int LIMIT_FIELD_NUMBER = 9;
+  private int limit_;
+  /**
+   * <code>int32 limit = 9;</code>
+   * @return The limit.
+   */
+  @java.lang.Override
+  public int getLimit() {
+    return limit_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -420,6 +452,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < sort_.size(); i++) {
       output.writeMessage(7, sort_.get(i));
+    }
+    if (offset_ != 0) {
+      output.writeInt32(8, offset_);
+    }
+    if (limit_ != 0) {
+      output.writeInt32(9, limit_);
     }
     unknownFields.writeTo(output);
   }
@@ -459,6 +497,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, sort_.get(i));
     }
+    if (offset_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(8, offset_);
+    }
+    if (limit_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(9, limit_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -488,6 +534,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getGroupByListList())) return false;
     if (!getSortList()
         .equals(other.getSortList())) return false;
+    if (getOffset()
+        != other.getOffset()) return false;
+    if (getLimit()
+        != other.getLimit()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -520,6 +570,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SORT_FIELD_NUMBER;
       hash = (53 * hash) + getSortList().hashCode();
     }
+    hash = (37 * hash) + OFFSET_FIELD_NUMBER;
+    hash = (53 * hash) + getOffset();
+    hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+    hash = (53 * hash) + getLimit();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -677,6 +731,10 @@ private static final long serialVersionUID = 0L;
       } else {
         sortBuilder_.clear();
       }
+      offset_ = 0;
+
+      limit_ = 0;
+
       return this;
     }
 
@@ -731,6 +789,8 @@ private static final long serialVersionUID = 0L;
       } else {
         result.sort_ = sortBuilder_.build();
       }
+      result.offset_ = offset_;
+      result.limit_ = limit_;
       onBuilt();
       return result;
     }
@@ -855,6 +915,12 @@ private static final long serialVersionUID = 0L;
             sortBuilder_.addAllMessages(other.sort_);
           }
         }
+      }
+      if (other.getOffset() != 0) {
+        setOffset(other.getOffset());
+      }
+      if (other.getLimit() != 0) {
+        setLimit(other.getLimit());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1733,6 +1799,68 @@ private static final long serialVersionUID = 0L;
         sort_ = null;
       }
       return sortBuilder_;
+    }
+
+    private int offset_ ;
+    /**
+     * <code>int32 offset = 8;</code>
+     * @return The offset.
+     */
+    @java.lang.Override
+    public int getOffset() {
+      return offset_;
+    }
+    /**
+     * <code>int32 offset = 8;</code>
+     * @param value The offset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOffset(int value) {
+      
+      offset_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 offset = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOffset() {
+      
+      offset_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int limit_ ;
+    /**
+     * <code>int32 limit = 9;</code>
+     * @return The limit.
+     */
+    @java.lang.Override
+    public int getLimit() {
+      return limit_;
+    }
+    /**
+     * <code>int32 limit = 9;</code>
+     * @param value The limit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLimit(int value) {
+      
+      limit_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 limit = 9;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLimit() {
+      
+      limit_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

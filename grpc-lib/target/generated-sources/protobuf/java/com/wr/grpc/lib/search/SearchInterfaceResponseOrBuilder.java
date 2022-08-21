@@ -56,6 +56,28 @@ public interface SearchInterfaceResponseOrBuilder extends
       int index);
 
   /**
+   * <pre>
+   * 从 0 开始的偏置值
+   * </pre>
+   *
+   * <code>int32 offset = 4;</code>
+   * @return The offset.
+   */
+  int getOffset();
+
+  /**
+   * <code>int32 limit = 5;</code>
+   * @return The limit.
+   */
+  int getLimit();
+
+  /**
+   * <code>int32 total = 6;</code>
+   * @return The total.
+   */
+  int getTotal();
+
+  /**
    * <code>.base.BaseResp baseResp = 255;</code>
    * @return Whether the baseResp field is set.
    */

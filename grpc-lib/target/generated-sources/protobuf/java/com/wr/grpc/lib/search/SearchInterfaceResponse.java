@@ -73,6 +73,21 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(com.wr.grpc.lib.search.Rows.parser(), extensionRegistry));
             break;
           }
+          case 32: {
+
+            offset_ = input.readInt32();
+            break;
+          }
+          case 40: {
+
+            limit_ = input.readInt32();
+            break;
+          }
+          case 48: {
+
+            total_ = input.readInt32();
+            break;
+          }
           case 2042: {
             com.wr.grpc.lib.BaseResp.Builder subBuilder = null;
             if (baseResp_ != null) {
@@ -237,6 +252,43 @@ private static final long serialVersionUID = 0L;
     return table_.get(index);
   }
 
+  public static final int OFFSET_FIELD_NUMBER = 4;
+  private int offset_;
+  /**
+   * <pre>
+   * 从 0 开始的偏置值
+   * </pre>
+   *
+   * <code>int32 offset = 4;</code>
+   * @return The offset.
+   */
+  @java.lang.Override
+  public int getOffset() {
+    return offset_;
+  }
+
+  public static final int LIMIT_FIELD_NUMBER = 5;
+  private int limit_;
+  /**
+   * <code>int32 limit = 5;</code>
+   * @return The limit.
+   */
+  @java.lang.Override
+  public int getLimit() {
+    return limit_;
+  }
+
+  public static final int TOTAL_FIELD_NUMBER = 6;
+  private int total_;
+  /**
+   * <code>int32 total = 6;</code>
+   * @return The total.
+   */
+  @java.lang.Override
+  public int getTotal() {
+    return total_;
+  }
+
   public static final int BASERESP_FIELD_NUMBER = 255;
   private com.wr.grpc.lib.BaseResp baseResp_;
   /**
@@ -286,6 +338,15 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < table_.size(); i++) {
       output.writeMessage(3, table_.get(i));
     }
+    if (offset_ != 0) {
+      output.writeInt32(4, offset_);
+    }
+    if (limit_ != 0) {
+      output.writeInt32(5, limit_);
+    }
+    if (total_ != 0) {
+      output.writeInt32(6, total_);
+    }
     if (baseResp_ != null) {
       output.writeMessage(255, getBaseResp());
     }
@@ -307,6 +368,18 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < table_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, table_.get(i));
+    }
+    if (offset_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, offset_);
+    }
+    if (limit_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, limit_);
+    }
+    if (total_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, total_);
     }
     if (baseResp_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -333,6 +406,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSql())) return false;
     if (!getTableList()
         .equals(other.getTableList())) return false;
+    if (getOffset()
+        != other.getOffset()) return false;
+    if (getLimit()
+        != other.getLimit()) return false;
+    if (getTotal()
+        != other.getTotal()) return false;
     if (hasBaseResp() != other.hasBaseResp()) return false;
     if (hasBaseResp()) {
       if (!getBaseResp()
@@ -357,6 +436,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TABLE_FIELD_NUMBER;
       hash = (53 * hash) + getTableList().hashCode();
     }
+    hash = (37 * hash) + OFFSET_FIELD_NUMBER;
+    hash = (53 * hash) + getOffset();
+    hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+    hash = (53 * hash) + getLimit();
+    hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+    hash = (53 * hash) + getTotal();
     if (hasBaseResp()) {
       hash = (37 * hash) + BASERESP_FIELD_NUMBER;
       hash = (53 * hash) + getBaseResp().hashCode();
@@ -505,6 +590,12 @@ private static final long serialVersionUID = 0L;
       } else {
         tableBuilder_.clear();
       }
+      offset_ = 0;
+
+      limit_ = 0;
+
+      total_ = 0;
+
       if (baseRespBuilder_ == null) {
         baseResp_ = null;
       } else {
@@ -549,6 +640,9 @@ private static final long serialVersionUID = 0L;
       } else {
         result.table_ = tableBuilder_.build();
       }
+      result.offset_ = offset_;
+      result.limit_ = limit_;
+      result.total_ = total_;
       if (baseRespBuilder_ == null) {
         result.baseResp_ = baseResp_;
       } else {
@@ -635,6 +729,15 @@ private static final long serialVersionUID = 0L;
             tableBuilder_.addAllMessages(other.table_);
           }
         }
+      }
+      if (other.getOffset() != 0) {
+        setOffset(other.getOffset());
+      }
+      if (other.getLimit() != 0) {
+        setLimit(other.getLimit());
+      }
+      if (other.getTotal() != 0) {
+        setTotal(other.getTotal());
       }
       if (other.hasBaseResp()) {
         mergeBaseResp(other.getBaseResp());
@@ -1059,6 +1162,111 @@ private static final long serialVersionUID = 0L;
         table_ = null;
       }
       return tableBuilder_;
+    }
+
+    private int offset_ ;
+    /**
+     * <pre>
+     * 从 0 开始的偏置值
+     * </pre>
+     *
+     * <code>int32 offset = 4;</code>
+     * @return The offset.
+     */
+    @java.lang.Override
+    public int getOffset() {
+      return offset_;
+    }
+    /**
+     * <pre>
+     * 从 0 开始的偏置值
+     * </pre>
+     *
+     * <code>int32 offset = 4;</code>
+     * @param value The offset to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOffset(int value) {
+      
+      offset_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * 从 0 开始的偏置值
+     * </pre>
+     *
+     * <code>int32 offset = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOffset() {
+      
+      offset_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int limit_ ;
+    /**
+     * <code>int32 limit = 5;</code>
+     * @return The limit.
+     */
+    @java.lang.Override
+    public int getLimit() {
+      return limit_;
+    }
+    /**
+     * <code>int32 limit = 5;</code>
+     * @param value The limit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLimit(int value) {
+      
+      limit_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 limit = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLimit() {
+      
+      limit_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int total_ ;
+    /**
+     * <code>int32 total = 6;</code>
+     * @return The total.
+     */
+    @java.lang.Override
+    public int getTotal() {
+      return total_;
+    }
+    /**
+     * <code>int32 total = 6;</code>
+     * @param value The total to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotal(int value) {
+      
+      total_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 total = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotal() {
+      
+      total_ = 0;
+      onChanged();
+      return this;
     }
 
     private com.wr.grpc.lib.BaseResp baseResp_;
